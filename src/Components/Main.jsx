@@ -36,6 +36,11 @@ const Main = (props) => {
       ) : (
         ''
       )}
+      {props.view === 'skills' ? (
+        <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'></div>
+      ) : (
+        ''
+      )}
       {props.view === 'projects' ? (
         <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'></div>
       ) : (
