@@ -117,7 +117,38 @@ const contentObj = {
             },
         ]
     },
-    projects: []
+    projects: [
+        {
+            name: 'Hexle',
+            link: 'https://www.supahkenneh.com/hexle',
+            image: ''
+        },
+        {
+            name: 'Pizza Shop',
+            link: '',
+            image: ''
+        },
+        {
+            name: 'Gimme Gimme',
+            link: '',
+            image: ''
+        },
+        {
+            name: 'Garden Guru',
+            link: '',
+            image: ''
+        },
+        {
+            name: 'Pixel Painter',
+            link: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
+            image: ''
+        },
+        {
+            name: 'Envision Gallery',
+            link: '',
+            image: ''
+        }
+    ]
 };
 
 export default contentObj;

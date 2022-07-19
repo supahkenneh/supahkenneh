@@ -3,7 +3,6 @@ import contentObj from './text';
 
 const Content = (props) => {
   const aboutMeParsed = contentObj.aboutMe.body.split('\n');
-  console.log(props);
   return (
     <React.Fragment>
       {!props.view || props.view === 'home' ? (
@@ -58,6 +57,24 @@ const Content = (props) => {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      ) : (
+        ''
+      )}
+      {props.view === 'projects' ? (
+        <div className='w-5/12 bg-content-gray flex justify-start content-center'>
+          <div className='p-10 pb-60 text-left self-center'>
+            {contentObj.projects.map((project, i) => {
+              return (
+                <div
+                  className='text-xl font-sans p-px opacity-80 leading-10'
+                  key={i}
+                >
+                  <div>{project.name}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       ) : (
