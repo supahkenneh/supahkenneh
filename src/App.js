@@ -6,7 +6,7 @@ import Content from './Components/Content';
 import { useState } from 'react';
 
 function App() {
-  const [view, setView] = useState('about');
+  const [view, setView] = useState('');
 
   function changeView(e) {
     setView(e.target.id);
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='App bg-smoke text-white h-screen'>
-      <NavBar handleView={(e) => changeView(e)} />
+      <NavBar handleView={(e) => changeView(e)} view={view} />
       <div className='flex h-full'>
         <Main view={view}></Main>
         <Content view={view}></Content>
