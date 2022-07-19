@@ -12,7 +12,7 @@ const Main = (props) => {
               Hello! My name is
             </div>
             <div className='text-9xl font-sans'>Kenny Chung</div>
-            <div className='text-3xl font-sans opacity-70'>
+            <div className='text-3xl font-sans opacity-90'>
               Web Developer 👨🏻‍💻
             </div>
             <div className='text-lg opacity-70'>

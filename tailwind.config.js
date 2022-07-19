@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         'mono': ['Roboto Mono', 'monospace'],
         'sans': ['Work Sans', 'sans-serif']
+      },
+      backgroundImage: {
+        'background': 'url("./assets/bg.png")'
       }
     },
   },

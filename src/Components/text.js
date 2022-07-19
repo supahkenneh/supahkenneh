@@ -45,10 +45,10 @@ const contentObj = {
         ],
         learning: [
             'Python',
-            'Phaser',
             'Swift',
-            'React Native',
-            'Tailwind'
+            'Tailwind',
+            'Phaser',
+            'React Native'
         ],
         icons: [
             {

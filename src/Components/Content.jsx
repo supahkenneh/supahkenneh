@@ -3,6 +3,7 @@ import contentObj from './text';
 
 const Content = (props) => {
   const aboutMeParsed = contentObj.aboutMe.body.split('\n');
+  console.log(props);
   return (
     <React.Fragment>
       {!props.view || props.view === 'home' ? (
@@ -15,7 +16,10 @@ const Content = (props) => {
           <div className='p-10 pb-60 text-left self-center'>
             {aboutMeParsed.map((line, i) => {
               return (
-                <div className='text-xl font-sans p-px opacity-80' key={i}>
+                <div
+                  className='text-xl font-sans p-px opacity-80 leading-10'
+                  key={i}
+                >
                   {line.trim()}
                 </div>
               );
