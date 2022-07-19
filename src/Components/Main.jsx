@@ -1,5 +1,6 @@
 import React from 'react';
 import headshot from '../assets/headshot.jpg';
+import contentObj from './text';
 
 const Main = (props) => {
   return (
@@ -37,7 +38,22 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'skills' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'></div>
+        <div className='w-7/12 bg-content-dark-gray flex justify-center content-center'>
+          <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
+            {contentObj.skills.icons.map((icon, i) => {
+              return (
+                <div className=''>
+                  <img
+                    src={icon.path}
+                    alt={icon.label}
+                    key={i}
+                    className='h-32 w-32 m-1'
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
       ) : (
         ''
       )}

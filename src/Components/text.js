@@ -1,3 +1,21 @@
+import javascript from '../assets/javascript.png';
+import typescript from '../assets/typescript.png';
+import react from '../assets/react.png';
+import angular from '../assets/angular.png';
+import aws from '../assets/aws.png';
+import mongo from '../assets/mongo.png';
+import node from '../assets/node.png';
+import redux from '../assets/redux.png';
+import github from '../assets/github.png';
+import python from '../assets/python.png';
+import swift from '../assets/swift.png';
+import tailwind from '../assets/tailwind.png';
+import phaser from '../assets/phaser.png';
+import html from '../assets/html.png';
+import css from '../assets/css.png';
+import material from '../assets/material.png';
+
+
 const contentObj = {
     aboutMe: {
         body: `🤙 Aloha! \n 
@@ -9,9 +27,95 @@ const contentObj = {
         🔥 My interests outside of tech include photography, gaming, exploring the outdoors, and weightlifting`
     },
     skills: {
-        proficient: ['Javascript', 'Node', 'React', 'Angular', 'Express', 'Typescript', 'HTML/CSS', 'Version Control: Git', 'Relational Databases: SQL', 'Non-relational Databases: MongoDB', 'Oracle/Peoplesoft', 'Redux', 'AWS - EC2, S3 Buckets', 'RESTful API Design', 'Responsive Design', 'Agile Development'],
-        learning: ['Python', 'Phaser', 'Swift', 'React Native', 'Tailwind'],
-        icons: []
+        tech: [
+            'Javascript',
+            'Typescript',
+            'React',
+            'Angular',
+            'Express',
+            'Node',
+            'HTML/CSS',
+            'Version Control: Github',
+            'Relational Databases: SQL',
+            'Non-relational Databases: MongoDB',
+            'Oracle/Peoplesoft',
+            'Redux',
+            'AWS - EC2, S3 Buckets',
+            'Material UI',
+        ],
+        learning: [
+            'Python',
+            'Phaser',
+            'Swift',
+            'React Native',
+            'Tailwind'
+        ],
+        icons: [
+            {
+                label: 'javascript',
+                path: javascript
+            },
+            {
+                label: 'typescript',
+                path: typescript
+            },
+            {
+                label: 'react',
+                path: react
+            },
+            {
+                label: 'angular',
+                path: angular
+            },
+            {
+                label: 'node',
+                path: node
+            },
+            {
+                label: 'html',
+                path: html
+            },
+            {
+                label: 'css',
+                path: css
+            },
+            {
+                label: 'github',
+                path: github
+            },
+            {
+                label: 'mongo',
+                path: mongo
+            },
+            {
+                label: 'redux',
+                path: redux
+            },
+            {
+                label: 'aws',
+                path: aws
+            },
+            {
+                label: 'material',
+                path: material
+            },
+            {
+                label: 'python',
+                path: python
+            },
+            {
+                label: 'swift',
+                path: swift
+            },
+            {
+                label: 'tailwind',
+                path: tailwind
+            },
+            {
+                label: 'phaser',
+                path: phaser
+            },
+        ]
     },
     projects: []
 };

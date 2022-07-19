@@ -32,7 +32,7 @@ const Content = (props) => {
               What I've worked with:
             </div>
             <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4'>
-              {contentObj.skills.proficient.map((skill, i) => {
+              {contentObj.skills.tech.map((skill, i) => {
                 return (
                   <div className='flex font-sans text-lg' key={i}>
                     {skill}
