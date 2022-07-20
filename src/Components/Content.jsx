@@ -2,8 +2,13 @@ import React from 'react';
 import contentObj from './text';
 
 const Content = (props) => {
-  const baseClasses = 'font-sans cursor-pointer hover:text-accent hover:underline-offset-4';
-  const activeClasses = 'font-sans cursor-pointer underline underline-offset-4 text-accent';
+  const baseClasses =
+    'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4';
+  const activeClasses =
+    'font-sans text-2xl leading-10 cursor-pointer underline underline-offset-4 text-accent';
+  const baseTextClasses = 'font-sans text-lg bg-content-text hidden';
+  const activeTextClasses =
+    'font-sans text-lg m-2 p-2 rounded bg-content-text block';
   const aboutMeParsed = contentObj.aboutMe.body.split('\n');
   return (
     <React.Fragment>
@@ -85,6 +90,36 @@ const Content = (props) => {
                     }
                   >
                     {project.name}
+                  </div>
+                  <div
+                    className={
+                      props.project === project.id
+                        ? activeTextClasses
+                        : baseTextClasses
+                    }
+                  >
+                    <div>{project.text}</div>
+                    <div>
+                      👉
+                      <a
+                        href={project.link}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='text-xl underline text-accent'
+                      >
+                        {project.name}
+                      </a>
+                    </div>
+                    {project.stack.map((tech, i) => {
+                      return (
+                        <div
+                          className='inline mr-2 opacity-90 text-base'
+                          key={i}
+                        >
+                          {tech}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               );
