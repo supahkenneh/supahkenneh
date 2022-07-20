@@ -15,6 +15,9 @@ import html from '../assets/html.png';
 import css from '../assets/css.png';
 import material from '../assets/material.png';
 import hexle from '../assets/hexle.png';
+import pizzashop from '../assets/pizzashop.gif';
+import gimme from '../assets/gimme.gif';
+import experimental from '../assets/experimental.png';
 
 
 const contentObj = {
@@ -124,7 +127,7 @@ const contentObj = {
             {
                 id: 'hexle',
                 name: 'Hexle',
-                link: 'https://www.supahkenneh.com/hexle',
+                links: [{ active: true, link: 'https://www.supahkenneh.com/hexle' }, { active: false, link: 'https://github.com/supahkenneh/hexle' }],
                 image: hexle,
                 text: `Inspired by the game: Wordle. Players guess the hexcode for the color shown to them. App is front-end only where state is managed in the app and local storage.`,
                 stack: ['React', 'Javascript']
@@ -132,25 +135,25 @@ const contentObj = {
             {
                 id: 'pizza',
                 name: 'Pizza Shop',
-                link: '',
-                image: '',
-                text: '',
+                links: [{ active: false, link: 'https://github.com/supahkenneh/pizza-game' }],
+                image: pizzashop,
+                text: 'My first attempt at game development. Created to express my love for pizza. This project was challenging because game development introduced new challenges to me but was a fun experience overall.',
                 stack: ['Phaser', 'Javascript', 'HTML']
             },
             {
                 id: 'gimme',
                 name: 'Gimme Gimme',
-                link: '',
-                image: '',
-                text: '',
-                stack: ['Javascript', 'Socket.io', 'IBM Watson API', 'AWS S3 Bucket API', 'Node.js', 'Docker', 'Heroku'],
+                links: [{ active: true, link: 'https://gimmemoar.herokuapp.com/' }, { active: false, link: 'https://github.com/supahkenneh/gimme-gimme' }],
+                image: gimme,
+                text: 'Node Knockout 2018 Hackathon entry. Inspired by a popular Hawaiian party game. Players are given a prompt and are given a time limit to take and submit a photo using their mobile phones to the server. Using IBM\'s photo recognition API, the photo is analyzed and a winner is declared when the photo submitted matches the prompt. Our project won the \'Most Popular\' category.',
+                stack: ['Javascript', 'Socket.io', 'IBM Watson', 'AWS S3 Bucket', 'Node.js', 'Express.js', 'Docker', 'Heroku'],
             },
             {
                 id: 'theme',
                 name: 'Experimental Theme',
-                link: '',
-                image: '',
-                text: '',
+                links: [{ active: true, link: 'https://marketplace.visualstudio.com/items?itemName=supahkenneh.experimental-theme' }, { active: false, link: 'https://github.com/supahkenneh/experimental-theme' }],
+                image: experimental,
+                text: 'I wanted to create a Visual Studio Code theme with colors that I liked. Experimental Theme is a dark blue theme that is published and available on the Visual Studio Marketplace.',
                 stack: ['VS Code', 'JSON']
             }
         ],
@@ -158,7 +161,7 @@ const contentObj = {
             {
                 id: 'garden',
                 name: 'Garden Guru',
-                link: '',
+                links: '',
                 image: '',
                 text: '',
                 stack: ['Angular', 'Node.js', 'PostgreSQL', 'AWS EC2']
@@ -166,7 +169,7 @@ const contentObj = {
             {
                 id: 'pixel',
                 name: 'Pixel Painter',
-                link: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
+                links: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
                 image: '',
                 text: '',
                 stack: ['HTML', 'CSS', 'Javascript']

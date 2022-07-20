@@ -99,27 +99,34 @@ const Content = (props) => {
                     }
                   >
                     <div>{project.text}</div>
-                    <div>
-                      👉
-                      <a
-                        href={project.link}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='text-xl underline text-accent'
-                      >
-                        {project.name}
-                      </a>
-                    </div>
-                    {project.stack.map((tech, i) => {
+                    {project.links.map((link, i) => {
                       return (
-                        <div
-                          className='inline mr-2 opacity-90 text-base'
-                          key={i}
-                        >
-                          {tech}
+                        <div key={i}>
+                          👉{' '}
+                          {link.active ? 'Check it out: ' : 'View the repo: '}
+                          <a
+                            href={link.link}
+                            target='_blank'
+                            rel='noreferrer'
+                            className='text-xl underline text-accent'
+                          >
+                            {link.active ? project.name : 'Github'}
+                          </a>
                         </div>
                       );
                     })}
+                    <div className=''>
+                      {project.stack.map((tech, i) => {
+                        return (
+                          <div
+                            className='inline mr-2 opacity-90 text-base'
+                            key={i}
+                          >
+                            {tech}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               );
