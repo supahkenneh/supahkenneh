@@ -159,20 +159,34 @@ const contentObj = {
             }
         ],
     },
-    contact: [
-        {
-            label: 'Github',
-            id: 'github',
-            link: 'https://github.com/supahkenneh',
-            icon: github
-        },
-        {
-            label: 'LinkedIn',
-            id: 'linkedin',
-            link: 'https://www.linkedin.com/in/chung-kenny/',
-            icon: linkedin
-        }
-    ]
+    contact: {
+        contacts: [
+            {
+                label: 'Phone',
+                id: 'phone',
+                ref: 'tel:+8084699635'
+            },
+            {
+                label: 'Email',
+                id: 'email',
+                ref: 'mailto:chunghlken@gmail.com'
+            }
+        ],
+        links: [
+            {
+                label: 'Github',
+                id: 'github',
+                link: 'https://github.com/supahkenneh',
+                icon: github
+            },
+            {
+                label: 'LinkedIn',
+                id: 'linkedin',
+                link: 'https://www.linkedin.com/in/chung-kenny/',
+                icon: linkedin
+            },
+        ]
+    }
 };
 
 export default contentObj;

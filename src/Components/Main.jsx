@@ -79,7 +79,7 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'contact' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-end content-center'></div>
+        <div className='w-7/12 bg-content-secondary flex justify-center content-center'></div>
       ) : (
         ''
       )}

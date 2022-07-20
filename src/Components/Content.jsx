@@ -72,9 +72,9 @@ const Content = (props) => {
       {props.view === 'projects' ? (
         <div className='w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
-            <div className='mb-3 text-xl font-mono text-accent'>
+            {/* <div className='mb-3 text-xl font-mono text-accent'>
               Featured Projects:
-            </div>
+            </div> */}
             {contentObj.projects.featured.map((project, i) => {
               return (
                 <div
@@ -139,26 +139,46 @@ const Content = (props) => {
       {props.view === 'contact' ? (
         <div className='w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
-            <div className='text-accent text-xl font-mono mb-5'>Links: </div>
-            {contentObj.contact.map((contact, i) => {
-              return (
-                <div key={i} className='mb-2'>
-                  <a
-                    href={contact.link}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='flex content-center text-xl underline underline-offset-4'
-                  >
-                    <img
-                      src={contact.icon}
-                      alt={contact.id}
-                      className='w-16 h-16'
-                    />
-                    {contact.label}
-                  </a>
-                </div>
-              );
-            })}
+            <div className='text-accent text-3xl font-mono mb-5'>Links: </div>
+            <div className='flex'>
+              {contentObj.contact.links.map((contact, i) => {
+                return (
+                  <div key={i} className='mb-2 mr-10'>
+                    <a
+                      href={contact.link}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex text-2xl underline underline-offset-4 font-sans'
+                    >
+                      <img
+                        src={contact.icon}
+                        alt={contact.id}
+                        className='w-16 h-16'
+                      />
+                      {contact.label}
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+            <div className='text-accent text-3xl font-mono mb-5'>Contact:</div>
+            <div className='flex'>
+              {contentObj.contact.contacts.map((contact, i) => {
+                return (
+                  <div key={i} className='mb-2 mr-10'>
+                    {contact.id === 'phone' ? (
+                      <a href={contact.ref} className='text-2xl font-sans'>
+                        📞 Phone
+                      </a>
+                    ) : (
+                      <a href={contact.ref} className='text-2xl font-sans'>
+                        ✉️ Email
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       ) : (
