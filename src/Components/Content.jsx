@@ -6,12 +6,12 @@ const Content = (props) => {
   return (
     <React.Fragment>
       {!props.view || props.view === 'home' ? (
-        <div className='w-5/12 bg-content-gray flex justify-center content-center'></div>
+        <div className='w-5/12 bg-content-primary flex justify-center content-center'></div>
       ) : (
         ''
       )}
       {props.view === 'about' ? (
-        <div className='w-5/12 bg-content-gray flex justify-center content-center'>
+        <div className='w-5/12 bg-content-primary flex justify-center content-center'>
           <div className='p-10 pb-60 text-left self-center'>
             {aboutMeParsed.map((line, i) => {
               return (
@@ -29,7 +29,7 @@ const Content = (props) => {
         ''
       )}
       {props.view === 'skills' ? (
-        <div className='w-5/12 bg-content-gray flex content-center'>
+        <div className='w-5/12 bg-content-primary flex content-center'>
           <div className='p-10 pb-40 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent'>
               What I've worked with:
@@ -63,7 +63,7 @@ const Content = (props) => {
         ''
       )}
       {props.view === 'projects' ? (
-        <div className='w-5/12 bg-content-gray flex justify-start content-center'>
+        <div className='w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
             {contentObj.projects.map((project, i) => {
               return (

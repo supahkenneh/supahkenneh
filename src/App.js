@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <div className='App bg-smoke text-white h-screen'>
+    <div className='App bg-darkest text-white h-screen'>
       <NavBar handleView={(e) => changeView(e)} view={view} />
       <div className='flex h-full'>
         <Main view={view}></Main>

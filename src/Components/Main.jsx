@@ -6,7 +6,7 @@ const Main = (props) => {
   return (
     <React.Fragment>
       {!props.view || props.view === 'home' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-center content-center'>
+        <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent'>
               Hello! My name is
@@ -25,7 +25,7 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'about' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'>
+        <div className='w-7/12 bg-content-secondary flex justify-end content-center'>
           <div className='p-10 pb-60 self-center flex justify-self-end z-10'>
             <img
               src={headshot}
@@ -38,7 +38,7 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'skills' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-center content-center'>
+        <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {contentObj.skills.icons.map((icon, i) => {
               return (
@@ -58,12 +58,12 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'projects' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'></div>
+        <div className='w-7/12 bg-content-secondary flex justify-end content-center'></div>
       ) : (
         ''
       )}
       {props.view === 'contact' ? (
-        <div className='w-7/12 bg-content-dark-gray flex justify-end content-center'></div>
+        <div className='w-7/12 bg-content-secondary flex justify-end content-center'></div>
       ) : (
         ''
       )}

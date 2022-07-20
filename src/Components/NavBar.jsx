@@ -1,4 +1,4 @@
-import logo from '../assets/kc-transparent.png';
+import logo from '../assets/logo-1.png';
 
 const NavBar = (props) => {
   const baseClasses = 'text-base font-mono';

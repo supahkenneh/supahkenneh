@@ -142,11 +142,6 @@ const contentObj = {
             name: 'Pixel Painter',
             link: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
             image: ''
-        },
-        {
-            name: 'Envision Gallery',
-            link: '',
-            image: ''
         }
     ]
 };

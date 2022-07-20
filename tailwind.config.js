@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'smoke': '#242424',
-        'content-gray': '#424549',
-        'content-dark-gray': '#36393e',
-        'accent': '#F29E4C'
+        'darkest': '#101419',
+        'content-primary': '#424B4D',
+        'content-secondary': '#1F2933',
+        'accent': '#6EF9F5'
       },
       fontFamily: {
         'mono': ['Roboto Mono', 'monospace'],
