@@ -1,9 +1,10 @@
 import logo from '../assets/logo-1.png';
 
 const NavBar = (props) => {
-  const baseClasses = 'text-base font-mono';
+  const baseClasses =
+    'text-base font-mono hover:text-accent hover:underline hover:underline-offset-4 hover:cursor-pointer';
   const activeClasses =
-    'text-base font-mono text-accent underline underline-offset-4';
+    'text-base font-mono text-accent underline underline-offset-4 hover:cursor-pointer';
 
   return (
     <div className='flex justify-betwee opacity-70'>

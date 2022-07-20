@@ -3,6 +3,10 @@ import headshot from '../assets/headshot.jpg';
 import contentObj from './text';
 
 const Main = (props) => {
+  let project;
+  if (props.project) {
+    project = contentObj.projects.featured.find((p) => p.id === props.project);
+  }
   return (
     <React.Fragment>
       {!props.view || props.view === 'home' ? (
@@ -42,7 +46,7 @@ const Main = (props) => {
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {contentObj.skills.icons.map((icon, i) => {
               return (
-                <div className=''>
+                <div className='' key={i}>
                   <img
                     src={icon.path}
                     alt={icon.label}
@@ -58,7 +62,19 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'projects' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-end content-center'></div>
+        <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
+          <div className='flex self-center h-1/2 mb-40'>
+            {project ? (
+              <img
+                src={project.image}
+                alt={project.id}
+                className='pointer-events-none'
+              />
+            ) : (
+              ''
+            )}
+          </div>
+        </div>
       ) : (
         ''
       )}

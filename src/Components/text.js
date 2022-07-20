@@ -14,6 +14,7 @@ import phaser from '../assets/phaser.png';
 import html from '../assets/html.png';
 import css from '../assets/css.png';
 import material from '../assets/material.png';
+import hexle from '../assets/hexle.png';
 
 
 const contentObj = {
@@ -45,6 +46,7 @@ const contentObj = {
         ],
         learning: [
             'Python',
+            'Vue',
             'Swift',
             'Tailwind',
             'Phaser',
@@ -117,33 +119,60 @@ const contentObj = {
             },
         ]
     },
-    projects: [
-        {
-            name: 'Hexle',
-            link: 'https://www.supahkenneh.com/hexle',
-            image: ''
-        },
-        {
-            name: 'Pizza Shop',
-            link: '',
-            image: ''
-        },
-        {
-            name: 'Gimme Gimme',
-            link: '',
-            image: ''
-        },
-        {
-            name: 'Garden Guru',
-            link: '',
-            image: ''
-        },
-        {
-            name: 'Pixel Painter',
-            link: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
-            image: ''
-        }
-    ]
+    projects: {
+        featured: [
+            {
+                id: 'hexle',
+                name: 'Hexle',
+                link: 'https://www.supahkenneh.com/hexle',
+                image: hexle,
+                text: `Inspired by the game: Wordle. Players guess the hexcode for the color shown to them. App is front-end only where state is managed in the app and local storage.`,
+                stack: ['React', 'Javascript']
+            },
+            {
+                id: 'pizza',
+                name: 'Pizza Shop',
+                link: '',
+                image: '',
+                text: '',
+                stack: ['Phaser', 'Javascript', 'HTML']
+            },
+            {
+                id: 'gimme',
+                name: 'Gimme Gimme',
+                link: '',
+                image: '',
+                text: '',
+                stack: ['Javascript', 'Socket.io', 'IBM Watson API', 'AWS S3 Bucket API', 'Node.js', 'Docker', 'Heroku'],
+            },
+            {
+                id: 'theme',
+                name: 'Experimental Theme',
+                link: '',
+                image: '',
+                text: '',
+                stack: ['VS Code', 'JSON']
+            }
+        ],
+        others: [
+            {
+                id: 'garden',
+                name: 'Garden Guru',
+                link: '',
+                image: '',
+                text: '',
+                stack: ['Angular', 'Node.js', 'PostgreSQL', 'AWS EC2']
+            },
+            {
+                id: 'pixel',
+                name: 'Pixel Painter',
+                link: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
+                image: '',
+                text: '',
+                stack: ['HTML', 'CSS', 'Javascript']
+            }
+        ]
+    }
 };
 
 export default contentObj;

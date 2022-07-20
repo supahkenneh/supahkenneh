@@ -7,17 +7,26 @@ import { useState } from 'react';
 
 function App() {
   const [view, setView] = useState('');
+  const [project, setProject] = useState('');
 
   function changeView(e) {
     setView(e.target.id);
+  }
+
+  function showProject(e) {
+    setProject(e.target.id);
   }
 
   return (
     <div className='App bg-darkest text-white h-screen'>
       <NavBar handleView={(e) => changeView(e)} view={view} />
       <div className='flex h-full'>
-        <Main view={view}></Main>
-        <Content view={view}></Content>
+        <Main view={view} project={project}></Main>
+        <Content
+          view={view}
+          project={project}
+          selectProject={(e) => showProject(e)}
+        ></Content>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import React from 'react';
 import contentObj from './text';
 
 const Content = (props) => {
+  const baseClasses = 'font-sans cursor-pointer hover:text-accent hover:underline-offset-4';
+  const activeClasses = 'font-sans cursor-pointer underline underline-offset-4 text-accent';
   const aboutMeParsed = contentObj.aboutMe.body.split('\n');
   return (
     <React.Fragment>
@@ -65,17 +67,36 @@ const Content = (props) => {
       {props.view === 'projects' ? (
         <div className='w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
-            {contentObj.projects.map((project, i) => {
+            <div className='mb-3 text-xl font-mono text-accent'>
+              Featured Projects:
+            </div>
+            {contentObj.projects.featured.map((project, i) => {
               return (
                 <div
                   className='text-xl font-sans p-px opacity-80 leading-10'
                   key={i}
                 >
-                  <div>{project.name}</div>
+                  <div
+                    onClick={props.selectProject}
+                    key={i}
+                    id={project.id}
+                    className={
+                      props.project === project.id ? activeClasses : baseClasses
+                    }
+                  >
+                    {project.name}
+                  </div>
                 </div>
               );
             })}
           </div>
+        </div>
+      ) : (
+        ''
+      )}
+      {props.view === 'contact' ? (
+        <div className='w-5/12 bg-content-primary flex justify-start content-center'>
+          <div className='p-10 pb-60 text-left self-center'></div>
         </div>
       ) : (
         ''
