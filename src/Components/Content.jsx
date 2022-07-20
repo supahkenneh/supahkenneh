@@ -138,7 +138,28 @@ const Content = (props) => {
       )}
       {props.view === 'contact' ? (
         <div className='w-5/12 bg-content-primary flex justify-start content-center'>
-          <div className='p-10 pb-60 text-left self-center'></div>
+          <div className='p-10 pb-60 text-left self-center'>
+            <div className='text-accent text-xl font-mono mb-5'>Links: </div>
+            {contentObj.contact.map((contact, i) => {
+              return (
+                <div key={i} className='mb-2'>
+                  <a
+                    href={contact.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='flex content-center text-xl underline underline-offset-4'
+                  >
+                    <img
+                      src={contact.icon}
+                      alt={contact.id}
+                      className='w-16 h-16'
+                    />
+                    {contact.label}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       ) : (
         ''

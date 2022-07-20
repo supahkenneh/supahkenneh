@@ -18,6 +18,7 @@ import hexle from '../assets/hexle.png';
 import pizzashop from '../assets/pizzashop.gif';
 import gimme from '../assets/gimme.gif';
 import experimental from '../assets/experimental.png';
+import linkedin from '../assets/linkedin.png';
 
 
 const contentObj = {
@@ -157,25 +158,21 @@ const contentObj = {
                 stack: ['VS Code', 'JSON']
             }
         ],
-        others: [
-            {
-                id: 'garden',
-                name: 'Garden Guru',
-                links: '',
-                image: '',
-                text: '',
-                stack: ['Angular', 'Node.js', 'PostgreSQL', 'AWS EC2']
-            },
-            {
-                id: 'pixel',
-                name: 'Pixel Painter',
-                links: 'http://pixelpainterkenny123.s3-website-us-west-2.amazonaws.com',
-                image: '',
-                text: '',
-                stack: ['HTML', 'CSS', 'Javascript']
-            }
-        ]
-    }
+    },
+    contact: [
+        {
+            label: 'Github',
+            id: 'github',
+            link: 'https://github.com/supahkenneh',
+            icon: github
+        },
+        {
+            label: 'LinkedIn',
+            id: 'linkedin',
+            link: 'https://www.linkedin.com/in/chung-kenny/',
+            icon: linkedin
+        }
+    ]
 };
 
 export default contentObj;
