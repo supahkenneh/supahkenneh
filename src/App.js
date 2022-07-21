@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
   const [view, setView] = useState('');
-  const [project, setProject] = useState('');
+  const [project, setProject] = useState('hexle');
 
   function changeView(e) {
     setView(e.target.id);

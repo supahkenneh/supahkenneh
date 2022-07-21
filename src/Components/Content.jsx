@@ -9,6 +9,7 @@ const Content = ({ view, project, selectProject }) => {
   const baseTextClasses = 'font-sans text-lg bg-content-text hidden';
   const activeTextClasses =
     'font-sans text-lg m-2 p-2 rounded bg-content-text block';
+
   return (
     <React.Fragment>
       {!view || view === 'home' ? (
@@ -74,7 +75,6 @@ const Content = ({ view, project, selectProject }) => {
               Featured Projects:
             </div>
             {contentObj.projects.featured.map((proj, i) => {
-              console.log(project);
               return (
                 <div
                   className='text-xl font-sans p-px opacity-80 leading-10'
