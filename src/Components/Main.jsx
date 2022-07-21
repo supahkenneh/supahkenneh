@@ -2,14 +2,16 @@ import React from 'react';
 import headshot from '../assets/headshot.jpg';
 import contentObj from './text';
 
-const Main = (props) => {
-  let project;
-  if (props.project) {
-    project = contentObj.projects.featured.find((p) => p.id === props.project);
+const Main = ({ project, view }) => {
+  let selectedProject;
+  if (project) {
+    selectedProject = contentObj.projects.featured.find(
+      (p) => p.id === project
+    );
   }
   return (
     <React.Fragment>
-      {!props.view || props.view === 'home' ? (
+      {!view || view === 'home' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent'>
@@ -28,7 +30,7 @@ const Main = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'about' ? (
+      {view === 'about' ? (
         <div className='w-7/12 bg-content-secondary flex justify-end content-center'>
           <div className='p-10 pb-60 self-center flex justify-self-end z-10'>
             <img
@@ -41,7 +43,7 @@ const Main = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'skills' ? (
+      {view === 'skills' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {contentObj.skills.icons.map((icon, i) => {
@@ -61,13 +63,13 @@ const Main = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'projects' ? (
+      {view === 'projects' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex self-center h-1/2 mb-40'>
-            {project ? (
+            {selectedProject ? (
               <img
-                src={project.image}
-                alt={project.id}
+                src={selectedProject.image}
+                alt={selectedProject.id}
                 className='pointer-events-none'
               />
             ) : (
@@ -78,7 +80,7 @@ const Main = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'contact' ? (
+      {view === 'contact' ? (
         <div className='w-screen bg-content-secondary flex justify-evenly content-center'>
           {contentObj.contact.links.map((contact, i) => {
             return (
