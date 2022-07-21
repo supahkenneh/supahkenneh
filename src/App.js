@@ -24,7 +24,6 @@ function App() {
         <Main view={view} project={project}></Main>
         <Content
           view={view}
-          project={project}
           selectProject={(e) => showProject(e)}
         ></Content>
       </div>

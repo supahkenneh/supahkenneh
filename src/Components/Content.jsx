@@ -1,7 +1,7 @@
 import React from 'react';
 import contentObj from './text';
 
-const Content = (props) => {
+const Content = ({ view, selectProject }) => {
   const baseClasses =
     'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4';
   const activeClasses =
@@ -12,12 +12,12 @@ const Content = (props) => {
   const aboutMeParsed = contentObj.aboutMe.body.split('\n');
   return (
     <React.Fragment>
-      {!props.view || props.view === 'home' ? (
+      {!view || view === 'home' ? (
         <div className='w-5/12 bg-content-primary flex justify-center content-center'></div>
       ) : (
         ''
       )}
-      {props.view === 'about' ? (
+      {view === 'about' ? (
         <div className='w-5/12 bg-content-primary flex justify-center content-center'>
           <div className='p-10 pb-60 text-left self-center'>
             {aboutMeParsed.map((line, i) => {
@@ -35,7 +35,7 @@ const Content = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'skills' ? (
+      {view === 'skills' ? (
         <div className='w-5/12 bg-content-primary flex content-center'>
           <div className='p-10 pb-40 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent'>
@@ -69,7 +69,7 @@ const Content = (props) => {
       ) : (
         ''
       )}
-      {props.view === 'projects' ? (
+      {view === 'projects' ? (
         <div className='w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent'>
@@ -82,18 +82,18 @@ const Content = (props) => {
                   key={i}
                 >
                   <div
-                    onClick={props.selectProject}
+                    onClick={selectProject}
                     key={i}
                     id={project.id}
                     className={
-                      props.project === project.id ? activeClasses : baseClasses
+                      project === project.id ? activeClasses : baseClasses
                     }
                   >
                     {project.name}
                   </div>
                   <div
                     className={
-                      props.project === project.id
+                      project === project.id
                         ? activeTextClasses
                         : baseTextClasses
                     }
