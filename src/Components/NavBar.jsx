@@ -7,9 +7,9 @@ const NavBar = ({ view, handleView }) => {
     'text-base font-mono text-accent underline underline-offset-4 hover:cursor-pointer';
 
   return (
-    <div className='flex justify-betwee opacity-70'>
+    <div className='flex justify-between opacity-70'>
       <div
-        className='flex w-7/12 text-4xl p-3 cursor-pointer'
+        className='flex w-7/12 text-4xl p-3 cursor-pointer pl-5'
         id='home'
         onClick={handleView}
       >

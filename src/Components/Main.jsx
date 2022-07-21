@@ -14,16 +14,13 @@ const Main = ({ project, view }) => {
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent'>
-              Hello! My name is
+              {contentObj.home.greeting}
             </div>
-            <div className='text-9xl font-sans'>Kenny Chung</div>
+            <div className='text-9xl font-sans'>{contentObj.home.header}</div>
             <div className='text-3xl font-sans opacity-90'>
-              Web Developer 👨🏻‍💻
+              {contentObj.home.subheader}
             </div>
-            <div className='text-lg opacity-70'>
-              I am a full stack developer with a passion for web development and
-              technology
-            </div>
+            <div className='text-lg opacity-70'>{contentObj.home.descr}</div>
           </div>
         </div>
       ) : (
@@ -93,7 +90,7 @@ const Main = ({ project, view }) => {
                   <img
                     src={contact.icon}
                     alt={contact.id}
-                    className='w-16 h-16'
+                    className='w-12 h-12'
                   />
                   {contact.label}
                 </a>

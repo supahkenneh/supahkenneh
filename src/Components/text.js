@@ -22,6 +22,13 @@ import linkedin from '../assets/linkedin.png';
 
 
 const contentObj = {
+    home: {
+        greeting: `Hello! My name is`,
+        header: `Kenny Chung`,
+        subheader: `Web Developer 👨🏻‍💻`,
+        descr: ` I am a full stack developer with a passion for web development and
+        technology`
+    },
     aboutMe: {
         body: `🤙 Aloha! \n 
         📍 My name is Kenny and I am a full stack web developer located in Washington, D.C. \n
