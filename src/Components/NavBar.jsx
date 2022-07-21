@@ -13,7 +13,7 @@ const NavBar = ({ view, handleView }) => {
         id='home'
         onClick={handleView}
       >
-        <img src={logo} alt='logo' className='w-10 h-10' />
+        <img src={logo} alt='logo' className='w-10 h-10' id='home' />
       </div>
       <div className='flex justify-evenly items-center w-5/12'>
         <div

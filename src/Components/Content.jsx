@@ -12,7 +12,7 @@ const Content = ({ view, project, selectProject }) => {
 
   return (
     <React.Fragment>
-      {!view || view === 'home' ? (
+      {view === 'home' ? (
         <div className='w-5/12 bg-content-primary flex-col justify-center content-center'>
           <div className='self-center flex justify-center m-6'>
             <img

@@ -9,7 +9,7 @@ const Main = ({ project, view }) => {
     );
   return (
     <React.Fragment>
-      {!view || view === 'home' ? (
+      {view === 'home' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent'>

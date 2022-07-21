@@ -6,7 +6,7 @@ import Content from './Components/Content';
 import { useState } from 'react';
 
 function App() {
-  const [view, setView] = useState('');
+  const [view, setView] = useState('home');
   const [project, setProject] = useState('hexle');
 
   function changeView(e) {
