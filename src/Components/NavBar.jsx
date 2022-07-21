@@ -1,10 +1,13 @@
 import logo from '../assets/logo-1.png';
+import { navBarClasses } from './text';
 
 const NavBar = ({ view, handleView }) => {
-  const baseClasses =
-    'text-base font-mono hover:text-accent hover:underline hover:underline-offset-4 hover:cursor-pointer';
-  const activeClasses =
-    'text-base font-mono text-accent underline underline-offset-4 hover:cursor-pointer';
+
+  const setClasses = (viewType) => {
+    return view === viewType
+      ? navBarClasses.activeClasses
+      : navBarClasses.baseClasses;
+  };
 
   return (
     <div className='flex justify-between opacity-70'>
@@ -16,22 +19,18 @@ const NavBar = ({ view, handleView }) => {
         <img src={logo} alt='logo' className='w-10 h-10' id='home' />
       </div>
       <div className='flex justify-evenly items-center w-5/12'>
-        <div
-          className={view === 'skills' ? activeClasses : baseClasses}
-          id='skills'
-          onClick={handleView}
-        >
+        <div className={setClasses('skills')} id='skills' onClick={handleView}>
           Skills
         </div>
         <div
-          className={view === 'projects' ? activeClasses : baseClasses}
+          className={setClasses('projects')}
           id='projects'
           onClick={handleView}
         >
           Projects
         </div>
         <div
-          className={view === 'contact' ? activeClasses : baseClasses}
+          className={setClasses('contact')}
           id='contact'
           onClick={handleView}
         >

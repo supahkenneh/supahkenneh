@@ -1,14 +1,18 @@
 import React from 'react';
-import contentObj from './text';
+import { homeObj, skillsObj, projectsObj, contentClasses, textClasses } from './text';
 
 const Content = ({ view, project, selectProject }) => {
-  const baseClasses =
-    'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4';
-  const activeClasses =
-    'font-sans text-2xl leading-10 cursor-pointer underline underline-offset-4 text-accent';
-  const baseTextClasses = 'font-sans text-lg bg-content-text hidden';
-  const activeTextClasses =
-    'font-sans text-lg m-2 p-2 rounded bg-content-text block';
+  const setClasses = (id, isText) => {
+    if (isText) {
+      if (project === id) return textClasses.activeClasses;
+      else return textClasses.baseClasses;
+    }
+
+    if (!isText) {
+      if (project === id) return contentClasses.activeClasses;
+      else return contentClasses.baseClasses;
+    }
+  };
 
   return (
     <React.Fragment>
@@ -16,13 +20,13 @@ const Content = ({ view, project, selectProject }) => {
         <div className='w-5/12 bg-content-primary flex-col justify-center content-center'>
           <div className='self-center flex justify-center m-6'>
             <img
-              src={contentObj.aboutMe.headshot}
+              src={homeObj.aboutMe.headshot}
               alt='headshot'
               className='h-60 w-60 object-cover rounded-lg border-4 border-accent pointer-events-none'
             />
           </div>
           <div className='p-10 text-left self-center'>
-            {contentObj.aboutMe.body.map((line, i) => {
+            {homeObj.aboutMe.body.map((line, i) => {
               return (
                 <div className='text-lg font-sans p-px opacity-80 mb-2' key={i}>
                   {line}
@@ -41,7 +45,7 @@ const Content = ({ view, project, selectProject }) => {
               What I've worked with:
             </div>
             <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4'>
-              {contentObj.skills.tech.map((skill, i) => {
+              {skillsObj.tech.map((skill, i) => {
                 return (
                   <div className='flex font-sans text-lg' key={i}>
                     {skill}
@@ -54,7 +58,7 @@ const Content = ({ view, project, selectProject }) => {
                 What I'm learning:
               </div>
               <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4'>
-                {contentObj.skills.learning.map((skill, i) => {
+                {skillsObj.learning.map((skill, i) => {
                   return (
                     <div className='flex font-sans text-lg' key={i}>
                       {skill}
@@ -74,7 +78,7 @@ const Content = ({ view, project, selectProject }) => {
             <div className='mb-3 text-xl font-mono text-accent'>
               Featured Projects:
             </div>
-            {contentObj.projects.featured.map((proj, i) => {
+            {projectsObj.featured.map((proj, i) => {
               return (
                 <div
                   className='text-xl font-sans p-px opacity-80 leading-10'
@@ -84,17 +88,11 @@ const Content = ({ view, project, selectProject }) => {
                     onClick={selectProject}
                     key={i}
                     id={proj.id}
-                    className={
-                      project === proj.id ? activeClasses : baseClasses
-                    }
+                    className={setClasses(proj.id, false)}
                   >
                     {proj.name}
                   </div>
-                  <div
-                    className={
-                      project === proj.id ? activeTextClasses : baseTextClasses
-                    }
-                  >
+                  <div className={setClasses(proj.id, true)}>
                     <div>{proj.text}</div>
                     {proj.links.map((link, i) => {
                       return (

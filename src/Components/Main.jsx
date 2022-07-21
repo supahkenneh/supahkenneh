@@ -1,25 +1,23 @@
 import React from 'react';
-import contentObj from './text';
+import { homeObj, skillsObj, projectsObj, contactObj } from './text';
 
 const Main = ({ project, view }) => {
   let selectedProject;
   if (project)
-    selectedProject = contentObj.projects.featured.find(
-      (p) => p.id === project
-    );
+    selectedProject = projectsObj.featured.find((p) => p.id === project);
   return (
     <React.Fragment>
       {view === 'home' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent'>
-              {contentObj.home.greeting}
+              {homeObj.home.greeting}
             </div>
-            <div className='text-9xl font-sans'>{contentObj.home.header}</div>
+            <div className='text-9xl font-sans'>{homeObj.home.header}</div>
             <div className='text-3xl font-sans opacity-90'>
-              {contentObj.home.subheader}
+              {homeObj.home.subheader}
             </div>
-            <div className='text-lg opacity-70'>{contentObj.home.descr}</div>
+            <div className='text-lg opacity-70'>{homeObj.home.descr}</div>
           </div>
         </div>
       ) : (
@@ -28,7 +26,7 @@ const Main = ({ project, view }) => {
       {view === 'skills' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
-            {contentObj.skills.icons.map((icon, i) => {
+            {skillsObj.icons.map((icon, i) => {
               return (
                 <div className='' key={i}>
                   <img
@@ -64,7 +62,7 @@ const Main = ({ project, view }) => {
       )}
       {view === 'contact' ? (
         <div className='w-screen bg-content-secondary flex justify-evenly content-center'>
-          {contentObj.contact.links.map((contact, i) => {
+          {contactObj.links.map((contact, i) => {
             return (
               <div className='self-center mb-60'>
                 <a
@@ -83,7 +81,7 @@ const Main = ({ project, view }) => {
               </div>
             );
           })}
-          {contentObj.contact.contacts.map((contact, i) => {
+          {contactObj.contacts.map((contact, i) => {
             return (
               <div key={i} className='self-center mb-60'>
                 {contact.id === 'phone' ? (
