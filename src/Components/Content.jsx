@@ -1,5 +1,11 @@
 import React from 'react';
-import { homeObj, skillsObj, projectsObj, contentClasses, textClasses } from './helpers';
+import {
+  homeObj,
+  skillsObj,
+  projectsObj,
+  contentClasses,
+  textClasses,
+} from './helpers';
 
 const Content = ({ view, project, selectProject }) => {
   const setClasses = (id, isText) => {
@@ -18,17 +24,22 @@ const Content = ({ view, project, selectProject }) => {
     <React.Fragment>
       {view === 'home' ? (
         <div className='w-5/12 bg-content-primary flex-col justify-center content-center'>
-          <div className='self-center flex justify-center m-6'>
-            <img
-              src={homeObj.aboutMe.headshot}
-              alt='headshot'
-              className='h-60 w-60 object-cover rounded-lg border-4 border-accent pointer-events-none'
-            />
+          <div className='self-center flex justify-center m-6 animate-[fadeIn9_2000ms_ease-in_1]'>
+            <div className='p-1 rounded-lg border-4 border-accent'>
+              <img
+                src={homeObj.aboutMe.headshot}
+                alt='headshot'
+                className='h-60 w-60 object-cover pointer-events-none rounded-sm'
+              />
+            </div>
           </div>
           <div className='p-10 text-left self-center'>
             {homeObj.aboutMe.body.map((line, i) => {
               return (
-                <div className='text-lg font-sans p-px opacity-80 mb-2' key={i}>
+                <div
+                  className='text-lg font-sans p-px opacity-90 mb-2 animate-[fadeIn9_2000ms_ease-in_1]'
+                  key={i}
+                >
                   {line}
                 </div>
               );
@@ -41,10 +52,10 @@ const Content = ({ view, project, selectProject }) => {
       {view === 'skills' ? (
         <div className='w-5/12 bg-content-primary flex content-center'>
           <div className='p-10 pb-40 text-left self-center'>
-            <div className='mb-3 text-xl font-mono text-accent'>
+            <div className='mb-3 text-xl font-mono text-accent animate-fadeIn'>
               What I've worked with:
             </div>
-            <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4'>
+            <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4 animate-[fadeIn9_1500ms_ease-in_1]'>
               {skillsObj.tech.map((skill, i) => {
                 return (
                   <div className='flex font-sans text-lg' key={i}>
@@ -54,10 +65,10 @@ const Content = ({ view, project, selectProject }) => {
               })}
             </div>
             <div>
-              <div className='mb-3 text-xl font-mono text-accent'>
+              <div className='mb-3 text-xl font-mono text-accent animate-fadeIn'>
                 What I'm learning:
               </div>
-              <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4'>
+              <div className='mb-10 grid gap-3 grid-cols-2 grid-rows-4 animate-[fadeIn9_1500ms_ease-in_1]'>
                 {skillsObj.learning.map((skill, i) => {
                   return (
                     <div className='flex font-sans text-lg' key={i}>
@@ -81,7 +92,7 @@ const Content = ({ view, project, selectProject }) => {
             {projectsObj.featured.map((proj, i) => {
               return (
                 <div
-                  className='text-xl font-sans p-px opacity-80 leading-10'
+                  className='text-xl font-sans p-px opacity-80 leading-10 animate-fadeIn'
                   key={i}
                 >
                   <div

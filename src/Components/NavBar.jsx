@@ -2,7 +2,6 @@ import logo from '../assets/logo-1.png';
 import { navBarClasses } from './helpers';
 
 const NavBar = ({ view, handleView }) => {
-
   const setClasses = (viewType) => {
     return view === viewType
       ? navBarClasses.activeClasses
@@ -16,21 +15,27 @@ const NavBar = ({ view, handleView }) => {
         id='home'
         onClick={handleView}
       >
-        <img src={logo} alt='logo' className='w-10 h-10' id='home' />
+        <div className='w-12 h-12'>
+          <img src={logo} alt='logo' id='home' />
+        </div>
       </div>
       <div className='flex justify-evenly items-center w-5/12'>
-        <div className={setClasses('skills')} id='skills' onClick={handleView}>
+        <div
+          className={`${setClasses('skills')} animate-fadeIn`}
+          id='skills'
+          onClick={handleView}
+        >
           Skills
         </div>
         <div
-          className={setClasses('projects')}
+          className={`${setClasses('projects')} animate-fadeIn`}
           id='projects'
           onClick={handleView}
         >
           Projects
         </div>
         <div
-          className={setClasses('contact')}
+          className={`${setClasses('contact')} animate-fadeIn`}
           id='contact'
           onClick={handleView}
         >

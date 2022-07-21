@@ -203,12 +203,12 @@ export const contactObj = {
 };
 
 export const navBarClasses = {
-    baseClasses: 'text-base font-mono hover:text-accent hover:underline hover:underline-offset-4 hover:cursor-pointer',
+    baseClasses: 'text-base font-mono hover:text-accent hover:underline hover:underline-offset-4 hover:cursor-pointer ease-in duration-200',
     activeClasses: 'text-base font-mono text-accent underline underline-offset-4 hover:cursor-pointer'
 };
 
 export const contentClasses = {
-    baseClasses: 'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4',
+    baseClasses: 'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4 ease-in duration-200',
     activeClasses: 'font-sans text-2xl leading-10 cursor-pointer underline underline-offset-4 text-accent'
 };
 export const textClasses = {

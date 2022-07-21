@@ -10,14 +10,14 @@ const Main = ({ project, view }) => {
       {view === 'home' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex-col text-left p-20 self-center pb-60'>
-            <div className='text-2xl font-mono text-accent'>
+            <div className='text-2xl font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
               {homeObj.home.greeting}
             </div>
-            <div className='text-9xl font-sans'>{homeObj.home.header}</div>
-            <div className='text-3xl font-sans opacity-90'>
+            <div className='text-9xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>{homeObj.home.header}</div>
+            <div className='text-3xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
               {homeObj.home.subheader}
             </div>
-            <div className='text-lg opacity-70'>{homeObj.home.descr}</div>
+            <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>{homeObj.home.descr}</div>
           </div>
         </div>
       ) : (
@@ -28,7 +28,7 @@ const Main = ({ project, view }) => {
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {skillsObj.icons.map((icon, i) => {
               return (
-                <div className='' key={i}>
+                <div className='animate-fadeIn' key={i}>
                   <img
                     src={icon.path}
                     alt={icon.label}
@@ -45,7 +45,7 @@ const Main = ({ project, view }) => {
       )}
       {view === 'projects' ? (
         <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
-          <div className='flex self-center h-1/2 mb-40'>
+          <div className='flex self-center h-1/2 mb-40 animate-fadeIn rounded-lg border-4 border-accent p-1'>
             {selectedProject ? (
               <img
                 src={selectedProject.image}
@@ -64,7 +64,7 @@ const Main = ({ project, view }) => {
         <div className='w-screen bg-content-secondary flex justify-evenly content-center'>
           {contactObj.links.map((contact, i) => {
             return (
-              <div className='self-center mb-60'>
+              <div className='self-center mb-60 animate-fadeIn'>
                 <a
                   href={contact.link}
                   target='_blank'
@@ -83,7 +83,7 @@ const Main = ({ project, view }) => {
           })}
           {contactObj.contacts.map((contact, i) => {
             return (
-              <div key={i} className='self-center mb-60'>
+              <div key={i} className='self-center mb-60 animate-fadeIn'>
                 {contact.id === 'phone' ? (
                   <a href={contact.ref} className='text-2xl font-sans'>
                     📞 Phone
