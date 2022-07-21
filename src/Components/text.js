@@ -45,7 +45,7 @@ const contentObj = {
             'Non-relational Databases: MongoDB',
             'Oracle/Peoplesoft',
             'Redux',
-            'AWS - EC2, S3 Buckets',
+            'AWS - EC2, S3',
             'Material UI',
         ],
         learning: [

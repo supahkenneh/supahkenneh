@@ -79,7 +79,42 @@ const Main = (props) => {
         ''
       )}
       {props.view === 'contact' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-center content-center'></div>
+        <div className='w-screen bg-content-secondary flex justify-evenly content-center'>
+          {contentObj.contact.links.map((contact, i) => {
+            return (
+              <div className='self-center mb-60'>
+                <a
+                  href={contact.link}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='flex text-2xl items-center'
+                >
+                  <img
+                    src={contact.icon}
+                    alt={contact.id}
+                    className='w-16 h-16'
+                  />
+                  {contact.label}
+                </a>
+              </div>
+            );
+          })}
+          {contentObj.contact.contacts.map((contact, i) => {
+            return (
+              <div key={i} className='self-center mb-60'>
+                {contact.id === 'phone' ? (
+                  <a href={contact.ref} className='text-2xl font-sans'>
+                    📞 Phone
+                  </a>
+                ) : (
+                  <a href={contact.ref} className='text-2xl font-sans'>
+                    ✉️ Email
+                  </a>
+                )}
+              </div>
+            );
+          })}
+        </div>
       ) : (
         ''
       )}
