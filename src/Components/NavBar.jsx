@@ -8,7 +8,11 @@ const NavBar = ({ view, handleView }) => {
 
   return (
     <div className='flex justify-betwee opacity-70'>
-      <div className='flex w-7/12 text-4xl p-3' id='home' onClick={handleView}>
+      <div
+        className='flex w-7/12 text-4xl p-3 cursor-pointer'
+        id='home'
+        onClick={handleView}
+      >
         <img src={logo} alt='logo' className='w-10 h-10' />
       </div>
       <div className='flex justify-evenly items-center w-5/12'>

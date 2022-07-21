@@ -1,7 +1,7 @@
 import React from 'react';
 import contentObj from './text';
 
-const Content = ({ view, selectProject }) => {
+const Content = ({ view, project, selectProject }) => {
   const baseClasses =
     'font-sans text-2xl leading-10 cursor-pointer hover:text-accent hover:underline-offset-4';
   const activeClasses =
@@ -75,7 +75,8 @@ const Content = ({ view, selectProject }) => {
             <div className='mb-3 text-xl font-mono text-accent'>
               Featured Projects:
             </div>
-            {contentObj.projects.featured.map((project, i) => {
+            {contentObj.projects.featured.map((proj, i) => {
+              console.log(project);
               return (
                 <div
                   className='text-xl font-sans p-px opacity-80 leading-10'
@@ -84,22 +85,20 @@ const Content = ({ view, selectProject }) => {
                   <div
                     onClick={selectProject}
                     key={i}
-                    id={project.id}
+                    id={proj.id}
                     className={
-                      project === project.id ? activeClasses : baseClasses
+                      project === proj.id ? activeClasses : baseClasses
                     }
                   >
-                    {project.name}
+                    {proj.name}
                   </div>
                   <div
                     className={
-                      project === project.id
-                        ? activeTextClasses
-                        : baseTextClasses
+                      project === proj.id ? activeTextClasses : baseTextClasses
                     }
                   >
-                    <div>{project.text}</div>
-                    {project.links.map((link, i) => {
+                    <div>{proj.text}</div>
+                    {proj.links.map((link, i) => {
                       return (
                         <div key={i}>
                           👉{' '}
@@ -110,13 +109,13 @@ const Content = ({ view, selectProject }) => {
                             rel='noreferrer'
                             className='text-xl underline text-accent'
                           >
-                            {link.active ? project.name : 'Github'}
+                            {link.active ? proj.name : 'Github'}
                           </a>
                         </div>
                       );
                     })}
                     <div className=''>
-                      {project.stack.map((tech, i) => {
+                      {proj.stack.map((tech, i) => {
                         return (
                           <div
                             className='inline mr-2 opacity-90 text-base'

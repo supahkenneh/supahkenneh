@@ -4,11 +4,10 @@ import contentObj from './text';
 
 const Main = ({ project, view }) => {
   let selectedProject;
-  if (project) {
+  if (project)
     selectedProject = contentObj.projects.featured.find(
       (p) => p.id === project
     );
-  }
   return (
     <React.Fragment>
       {!view || view === 'home' ? (
