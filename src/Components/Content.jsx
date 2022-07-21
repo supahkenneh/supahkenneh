@@ -9,24 +9,22 @@ const Content = ({ view, project, selectProject }) => {
   const baseTextClasses = 'font-sans text-lg bg-content-text hidden';
   const activeTextClasses =
     'font-sans text-lg m-2 p-2 rounded bg-content-text block';
-  const aboutMeParsed = contentObj.aboutMe.body.split('\n');
   return (
     <React.Fragment>
       {!view || view === 'home' ? (
-        <div className='w-5/12 bg-content-primary flex justify-center content-center'></div>
-      ) : (
-        ''
-      )}
-      {view === 'about' ? (
-        <div className='w-5/12 bg-content-primary flex justify-center content-center'>
-          <div className='p-10 pb-60 text-left self-center'>
-            {aboutMeParsed.map((line, i) => {
+        <div className='w-5/12 bg-content-primary flex-col justify-center content-center'>
+          <div className='self-center flex justify-center m-6'>
+            <img
+              src={contentObj.aboutMe.headshot}
+              alt='headshot'
+              className='h-60 w-60 object-cover rounded-lg border-4 border-accent pointer-events-none'
+            />
+          </div>
+          <div className='p-10 text-left self-center'>
+            {contentObj.aboutMe.body.map((line, i) => {
               return (
-                <div
-                  className='text-xl font-sans p-px opacity-80 leading-10'
-                  key={i}
-                >
-                  {line.trim()}
+                <div className='text-lg font-sans p-px opacity-80 mb-2' key={i}>
+                  {line}
                 </div>
               );
             })}

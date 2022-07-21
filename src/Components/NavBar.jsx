@@ -17,13 +17,6 @@ const NavBar = ({ view, handleView }) => {
       </div>
       <div className='flex justify-evenly items-center w-5/12'>
         <div
-          className={view === 'about' ? activeClasses : baseClasses}
-          id='about'
-          onClick={handleView}
-        >
-          About
-        </div>
-        <div
           className={view === 'skills' ? activeClasses : baseClasses}
           id='skills'
           onClick={handleView}

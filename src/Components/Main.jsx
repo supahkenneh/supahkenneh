@@ -1,5 +1,4 @@
 import React from 'react';
-import headshot from '../assets/headshot.jpg';
 import contentObj from './text';
 
 const Main = ({ project, view }) => {
@@ -21,19 +20,6 @@ const Main = ({ project, view }) => {
               {contentObj.home.subheader}
             </div>
             <div className='text-lg opacity-70'>{contentObj.home.descr}</div>
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
-      {view === 'about' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-end content-center'>
-          <div className='p-10 pb-60 self-center flex justify-self-end z-10'>
-            <img
-              src={headshot}
-              alt='headshot'
-              className='h-80 w-80 object-cover rounded-lg border-4 border-accent pointer-events-none'
-            />
           </div>
         </div>
       ) : (

@@ -19,24 +19,27 @@ import pizzashop from '../assets/pizzashop.gif';
 import gimme from '../assets/gimme.gif';
 import experimental from '../assets/experimental.png';
 import linkedin from '../assets/linkedin.png';
+import headshot from '../assets/headshot.jpg';
 
 
 const contentObj = {
     home: {
-        greeting: `Hello! My name is`,
+        greeting: `Aloha! My name is`,
         header: `Kenny Chung`,
         subheader: `Web Developer 👨🏻‍💻`,
         descr: ` I am a full stack developer with a passion for web development and
         technology`
     },
     aboutMe: {
-        body: `🤙 Aloha! \n 
-        📍 My name is Kenny and I am a full stack web developer located in Washington, D.C. \n
-        🎓 I was born and raised in Hawaii where I graduated with a Bachelor's degree in Nursing. \n 
-        ❓ A couple years later, I decided to switch gears and scratch my itch for learning more about technology. \n 
-        🌐 I attended DevLeague where I learned about web development and what it means to be a developer. \n
-        🛠️ Fast forward 5 years later, my day-to-day consists of creating solutions to problems involving modernization, scaling, and accessibilty. \n
-        🔥 My interests outside of tech include photography, gaming, exploring the outdoors, and weightlifting`
+        headshot,
+        body: [
+            '📍 I am located in Washington, D.C.',
+            '🎓 I was born and raised in Hawaii where I graduated with a Bachelor\'s degree in Nursing.',
+            '❓ A couple years later, I decided to switch gears and scratch my itch for learning more about technology.',
+            '🌐 I attended DevLeague where I learned about web development and what it means to be a developer.',
+            '🛠️ Fast forward 5 years later, my day-to-day consists of creating solutions to problems involving modernization, scaling, and accessibilty.',
+            '🔥 My interests outside of tech include photography, gaming, exploring the outdoors, and weightlifting',
+        ]
     },
     skills: {
         tech: [
