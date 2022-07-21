@@ -33,11 +33,11 @@ export const homeObj = {
     aboutMe: {
         headshot,
         body: [
-            '📍 I am located in Washington, D.C.',
-            '🎓 I was born and raised in Hawaii where I graduated with a Bachelor\'s degree in Nursing.',
-            '❓ A couple years later, I decided to switch gears and scratch my itch for learning more about technology.',
-            '🌐 I attended DevLeague where I learned about web development and what it means to be a developer.',
-            '🛠️ Fast forward 5 years later, my day-to-day consists of creating solutions to problems involving modernization, scaling, and accessibilty.',
+            '📍 I am located in Washington, D.C',
+            '🎓 I was born and raised in Hawaii where I graduated with a Bachelor\'s degree in Nursing',
+            '❓ A couple years later, I decided to switch gears and scratch my itch for learning more about technology',
+            '🌐 I attended DevLeague where I learned about web development and what it means to be a developer',
+            '🛠️ Fast forward 5 years later, my day-to-day consists of creating solutions to problems involving modernization, scaling, and accessibilty',
             '🔥 My interests outside of tech include photography, gaming, exploring the outdoors, and weightlifting',
         ]
     }

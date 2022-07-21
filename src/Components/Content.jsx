@@ -1,5 +1,5 @@
 import React from 'react';
-import { homeObj, skillsObj, projectsObj, contentClasses, textClasses } from './text';
+import { homeObj, skillsObj, projectsObj, contentClasses, textClasses } from './helpers';
 
 const Content = ({ view, project, selectProject }) => {
   const setClasses = (id, isText) => {

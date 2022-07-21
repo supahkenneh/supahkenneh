@@ -1,5 +1,5 @@
 import logo from '../assets/logo-1.png';
-import { navBarClasses } from './text';
+import { navBarClasses } from './helpers';
 
 const NavBar = ({ view, handleView }) => {
 
