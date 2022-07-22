@@ -8,9 +8,9 @@ const NavBar = ({ view, handleView }) => {
   };
 
   return (
-    <div className='flex justify-between opacity-70'>
+    <div className='flex justify-evenly sm:justify-between opacity-70'>
       <div
-        className='flex w-7/12 text-4xl p-3 cursor-pointer pl-5 ease-in duration-200 hover:underline active:text-accent'
+        className='flex w-4/12 sm:w-7/12 text-4xl p-3 cursor-pointer pl-5 ease-in duration-200 hover:underline active:text-accent'
         id='home'
         onClick={handleView}
       >
@@ -21,7 +21,7 @@ const NavBar = ({ view, handleView }) => {
           Home
         </div>
       </div>
-      <div className='flex justify-evenly items-center w-5/12'>
+      <div className='flex justify-evenly items-center w-8/12 sm:w-5/12'>
         <div
           className={`${setClasses('skills')} animate-fadeIn`}
           id='skills'

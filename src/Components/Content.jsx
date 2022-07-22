@@ -23,8 +23,8 @@ const Content = ({ view, project, selectProject }) => {
   return (
     <React.Fragment>
       {view === 'home' ? (
-        <div className='w-5/12 bg-content-primary flex-col justify-center content-center' id='content'>
-          <div className='self-center flex justify-center m-6 animate-[fadeIn9_2000ms_ease-in_1]'>
+        <div className='w-auto sm:w-5/12 bg-content-primary flex-col justify-center content-center' id='content'>
+          <div className='self-center flex justify-center pt-10 sm:m-6 animate-[fadeIn9_2000ms_ease-in_1]'>
             <div className='p-1 rounded-lg border-4 border-accent'>
               <img
                 src={homeObj.aboutMe.headshot}
@@ -50,7 +50,7 @@ const Content = ({ view, project, selectProject }) => {
         ''
       )}
       {view === 'skills' ? (
-        <div className='w-5/12 bg-content-primary flex content-center'>
+        <div className='w-auto sm:w-5/12 bg-content-primary flex content-center'>
           <div className='p-10 pb-40 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent animate-fadeIn'>
               What I've worked with:
@@ -84,7 +84,7 @@ const Content = ({ view, project, selectProject }) => {
         ''
       )}
       {view === 'projects' ? (
-        <div className='w-5/12 bg-content-primary flex justify-start content-center'>
+        <div className='w-auto sm:w-5/12 bg-content-primary flex justify-start content-center'>
           <div className='p-10 pb-60 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent'>
               Featured Projects:

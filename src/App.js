@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='App bg-darkest text-white h-screen'>
       <NavBar handleView={(e) => changeView(e)} view={view} />
-      <div className='flex h-full'>
+      <div className='flex-col sm:flex sm:flex-row h-full'>
         <Main view={view} project={project}></Main>
         <Content
           view={view}
