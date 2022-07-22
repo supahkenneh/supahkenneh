@@ -1,7 +1,7 @@
 {
   "name": "supahkenneh",
   "version": "0.1.0",
-  "homgepage": "https://supahkenneh.github.io/supahkenneh",
+  "homgepage": "https://kennychung.dev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
