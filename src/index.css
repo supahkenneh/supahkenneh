@@ -15,3 +15,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#navbar-name {
+  opacity: 0;
+}
+
+#home:hover #navbar-name {
+  animation: revealLeft 250ms ease-in forwards;
+}
+
+#skills {
+  opacity: 0;
+  animation: revealRight 750ms ease-in forwards;
+}
+
+#projects {
+  opacity: 0;
+  animation: revealRight 1s ease-in forwards;
+}
+
+#contact {
+  opacity: 0;
+  animation: revealRight 1250ms ease-in forwards;
+}
+
+.skill-icon {
+  opacity: 0;
+  animation: revealLeft 500ms ease-in forwards;
+}
+
+@keyframes revealLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes revealRight {
+  0% {
+    transform: translateX(200%);
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

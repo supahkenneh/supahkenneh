@@ -8,7 +8,7 @@ const Main = ({ project, view }) => {
   return (
     <React.Fragment>
       {view === 'home' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-center content-center'>
+        <div className='w-7/12 bg-content-secondary flex justify-center content-center' id='main'>
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
               {homeObj.home.greeting}
@@ -28,7 +28,7 @@ const Main = ({ project, view }) => {
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {skillsObj.icons.map((icon, i) => {
               return (
-                <div className='animate-fadeIn' key={i}>
+                <div className={`animate-fadeIn skill-icon`} key={i}>
                   <img
                     src={icon.path}
                     alt={icon.label}

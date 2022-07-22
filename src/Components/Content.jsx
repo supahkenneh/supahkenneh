@@ -23,7 +23,7 @@ const Content = ({ view, project, selectProject }) => {
   return (
     <React.Fragment>
       {view === 'home' ? (
-        <div className='w-5/12 bg-content-primary flex-col justify-center content-center'>
+        <div className='w-5/12 bg-content-primary flex-col justify-center content-center' id='content'>
           <div className='self-center flex justify-center m-6 animate-[fadeIn9_2000ms_ease-in_1]'>
             <div className='p-1 rounded-lg border-4 border-accent'>
               <img
