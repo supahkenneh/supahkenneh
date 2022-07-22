@@ -20,6 +20,7 @@ import gimme from '../assets/gimme.gif';
 import experimental from '../assets/experimental.png';
 import linkedin from '../assets/linkedin.png';
 import headshot from '../assets/headshot.jpg';
+import logo from '../assets/logo-1.png';
 
 
 export const homeObj = {
@@ -201,6 +202,8 @@ export const contactObj = {
         },
     ]
 };
+
+export const appLogo = logo;
 
 export const navBarClasses = {
     baseClasses: 'text-base font-mono hover:text-accent hover:underline hover:underline-offset-4 hover:cursor-pointer ease-in duration-200',

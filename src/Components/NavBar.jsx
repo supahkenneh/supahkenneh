@@ -1,5 +1,4 @@
-import logo from '../assets/logo-1.png';
-import { navBarClasses } from './helpers';
+import { navBarClasses, appLogo } from './helpers';
 
 const NavBar = ({ view, handleView }) => {
   const setClasses = (viewType) => {
@@ -16,9 +15,11 @@ const NavBar = ({ view, handleView }) => {
         onClick={handleView}
       >
         <div className='w-12 h-12'>
-          <img src={logo} alt='logo' id='home' />
+          <img src={appLogo} alt='logo' id='home' />
         </div>
-        <div className='font-mono text-base self-center ml-2' id='navbar-name'>Home</div>
+        <div className='font-mono text-base self-center ml-2' id='navbar-name'>
+          Home
+        </div>
       </div>
       <div className='flex justify-evenly items-center w-5/12'>
         <div
