@@ -8,16 +8,23 @@ const Main = ({ project, view }) => {
   return (
     <React.Fragment>
       {view === 'home' ? (
-        <div className='w-7/12 bg-content-secondary flex justify-center content-center' id='main'>
+        <div
+          className='w-7/12 bg-content-secondary flex justify-center content-center'
+          id='main'
+        >
           <div className='flex-col text-left p-20 self-center pb-60'>
             <div className='text-2xl font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
               {homeObj.home.greeting}
             </div>
-            <div className='text-9xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>{homeObj.home.header}</div>
+            <div className='text-9xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
+              {homeObj.home.header}
+            </div>
             <div className='text-3xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
               {homeObj.home.subheader}
             </div>
-            <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>{homeObj.home.descr}</div>
+            <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>
+              {homeObj.home.descr}
+            </div>
           </div>
         </div>
       ) : (
@@ -28,7 +35,11 @@ const Main = ({ project, view }) => {
           <div className='grid gap-6 grid-cols-4 grid-rows-5 self-center'>
             {skillsObj.icons.map((icon, i) => {
               return (
-                <div className={`animate-fadeIn skill-icon`} key={i}>
+                <div
+                  className='animate-fadeIn skill-icon'
+                  key={i}
+                  id={`icon-${i}`}
+                >
                   <img
                     src={icon.path}
                     alt={icon.label}

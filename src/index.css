@@ -39,16 +39,55 @@ code {
   animation: revealRight 1250ms ease-in forwards;
 }
 
-.skill-icon {
+#icon-3 {
+  opacity: 0;
+  animation: revealLeft 300ms ease-in forwards;
+}
+
+#icon-2,
+#icon-7 {
   opacity: 0;
   animation: revealLeft 500ms ease-in forwards;
+}
+
+#icon-1,
+#icon-6,
+#icon-11 {
+  opacity: 0;
+  animation: revealLeft 700ms ease-in forwards;
+}
+
+#icon-0,
+#icon-5,
+#icon-10,
+#icon-15 {
+  opacity: 0;
+  animation: revealLeft 900ms ease-in forwards;
+}
+
+#icon-4,
+#icon-9,
+#icon-14 {
+  opacity: 0;
+  animation: revealLeft 1000ms ease-in forwards;
+}
+
+#icon-8,
+#icon-13 {
+  opacity: 0;
+  animation: revealLeft 1100ms ease-in forwards;
+}
+
+#icon-12 {
+  opacity: 0;
+  animation: revealLeft 1200ms ease-in forwards;
 }
 
 @keyframes revealLeft {
   0% {
     transform: translateX(-200%);
   }
-  75% {
+  50% {
     opacity: 0;
   }
   100% {
