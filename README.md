@@ -11,6 +11,4 @@ To learn more about me and what I've worked on, please visit my portfolio:
 
 👾 Game development
 
-🍎 Creating beginner programming courses
-
 🎵 Endlessly consolidating my Spotify playlists
