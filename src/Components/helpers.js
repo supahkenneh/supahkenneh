@@ -14,6 +14,7 @@ import phaser from '../assets/phaser.png';
 import html from '../assets/html.png';
 import css from '../assets/css.png';
 import material from '../assets/material.png';
+import auxbuddy from '../assets/auxbuddy.gif';
 import hexle from '../assets/hexle.png';
 import pizzashop from '../assets/pizzashop.gif';
 import gimme from '../assets/gimme.gif';
@@ -139,6 +140,14 @@ export const skillsObj = {
 
 export const projectsObj = {
     featured: [
+        {
+            id: 'auxbuddy',
+            name: 'Aux Buddy',
+            links: [{ active: true, link: 'https://aux-buddy.herokuapp.com/' }, { active: false, link: 'https://github.com/supahkenneh/Aux-Buddy' }],
+            image: auxbuddy,
+            text: `Powered by Spotify API. Once users are logged in through Spotify OAuth, they can quickly create playlists for whatever mood their environment calls for by inputting artist names. Once the playlist has been generated, they can futher fine tune it by adding or removing songs.`,
+            stack: ['React', 'Javascript', 'Node.js', 'Spotify API', 'Tailwind CSS', 'Heroku', 'Express.js']
+        },
         {
             id: 'hexle',
             name: 'Hexle',

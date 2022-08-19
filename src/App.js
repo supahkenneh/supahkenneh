@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
   const [view, setView] = useState('home');
-  const [project, setProject] = useState('hexle');
+  const [project, setProject] = useState('auxbuddy');
 
   function changeView(e) {
     setView(e.target.id);
