@@ -4,13 +4,11 @@ I am a web developer from Honolulu, HI. Currently residing in Washington, D.C. I
 
 To learn more about me and what I've worked on, please visit my portfolio:
 
-[Kenny Chung](https://www.kennychung.dev)
+[Kenny Chung](https://kennychung.dev)
 
-## Currently working on:
-🧠 Expanding my knowledge in Vue.js
+## What am I up to:
+👨‍💻 Learning Vue and Firebase
 
-👾 Game development
-
-🍎 Creating beginner programming courses
+🎸 Learning the bass
 
 🎵 Endlessly consolidating my Spotify playlists
