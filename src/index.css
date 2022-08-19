@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,95 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#navbar-name {
+  opacity: 0;
+}
+
+#home:hover #navbar-name {
+  animation: revealLeft 250ms ease-in forwards;
+}
+
+#skills {
+  opacity: 0;
+  animation: revealRight 750ms ease-in forwards;
+}
+
+#projects {
+  opacity: 0;
+  animation: revealRight 1s ease-in forwards;
+}
+
+#contact {
+  opacity: 0;
+  animation: revealRight 1250ms ease-in forwards;
+}
+
+#icon-3 {
+  opacity: 0;
+  animation: revealLeft 300ms ease-in forwards;
+}
+
+#icon-2,
+#icon-7 {
+  opacity: 0;
+  animation: revealLeft 500ms ease-in forwards;
+}
+
+#icon-1,
+#icon-6,
+#icon-11 {
+  opacity: 0;
+  animation: revealLeft 700ms ease-in forwards;
+}
+
+#icon-0,
+#icon-5,
+#icon-10,
+#icon-15 {
+  opacity: 0;
+  animation: revealLeft 900ms ease-in forwards;
+}
+
+#icon-4,
+#icon-9,
+#icon-14 {
+  opacity: 0;
+  animation: revealLeft 1000ms ease-in forwards;
+}
+
+#icon-8,
+#icon-13 {
+  opacity: 0;
+  animation: revealLeft 1100ms ease-in forwards;
+}
+
+#icon-12 {
+  opacity: 0;
+  animation: revealLeft 1200ms ease-in forwards;
+}
+
+@keyframes revealLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes revealRight {
+  0% {
+    transform: translateX(200%);
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
