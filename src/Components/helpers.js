@@ -29,18 +29,17 @@ export const homeObj = {
         greeting: `Aloha! My name is`,
         header: `Kenny Chung`,
         subheader: `Web Developer 👨🏻‍💻`,
-        descr: ` I am a full stack developer with a passion for web development and
-        technology`
+        descr: ` I am a full stack developer with a passion for all things tech. I enjoy creating clean, efficient, and accessible web applications that provide seamless user experiences.`,
     },
     aboutMe: {
         headshot,
         body: [
-            '📍 I am located in Washington, D.C',
+            '📍 I am located in Honolulu, Hawaii',
             '🎓 I was born and raised in Hawaii where I graduated with a Bachelor\'s degree in Nursing',
-            '❓ A couple years later, I decided to switch gears and scratch my itch for learning more about technology',
+            '❓ A couple years later, I decided to exploit my free will and scratch my itch for learning more about programming',
             '🌐 I attended DevLeague where I learned about web development and what it means to be a developer',
-            '🛠️ Fast forward 5 years later, my day-to-day consists of creating solutions to problems involving modernization, scaling, and accessibilty',
-            '🔥 My interests outside of tech include photography, gaming, exploring the outdoors, and weightlifting',
+            '🛠️ Fast forward 7 years later, my day-to-day consists of creating technical solutions to problems involving modernization, scaling, performance, and accessibilty',
+            '🔥 My interests outside of tech include DJing, photography, and videography',
         ]
     }
 }
@@ -64,10 +63,6 @@ export const skillsObj = {
     ],
     learning: [
         'Python',
-        'Vue',
-        'Swift',
-        'Tailwind',
-        'Phaser',
         'React Native'
     ],
     icons: [
@@ -172,14 +167,14 @@ export const projectsObj = {
             text: 'Node Knockout 2018 Hackathon entry. Inspired by a popular Hawaiian party game. Players are given a prompt and are given a time limit to take and submit a photo using their mobile phones to the server. Using IBM\'s photo recognition API, the photo is analyzed and a winner is declared when the photo submitted matches the prompt. Our project won the \'Most Popular\' category.',
             stack: ['Javascript', 'Socket.io', 'IBM Watson', 'AWS S3 Bucket', 'Node.js', 'Express.js', 'Docker', 'Heroku'],
         },
-        {
-            id: 'theme',
-            name: 'Experimental Theme',
-            links: [{ active: true, link: 'https://marketplace.visualstudio.com/items?itemName=supahkenneh.experimental-theme' }, { active: false, link: 'https://github.com/supahkenneh/experimental-theme' }],
-            image: experimental,
-            text: 'I wanted to create a Visual Studio Code theme with colors that I liked. Experimental Theme is a dark blue theme that is published and available on the Visual Studio Marketplace.',
-            stack: ['VS Code', 'JSON']
-        }
+        // {
+        //     id: 'theme',
+        //     name: 'Experimental Theme',
+        //     links: [{ active: true, link: 'https://marketplace.visualstudio.com/items?itemName=supahkenneh.experimental-theme' }, { active: false, link: 'https://github.com/supahkenneh/experimental-theme' }],
+        //     image: experimental,
+        //     text: 'I wanted to create a Visual Studio Code theme with colors that I liked. Experimental Theme is a dark blue theme that is published and available on the Visual Studio Marketplace.',
+        //     stack: ['VS Code', 'JSON']
+        // }
     ],
 };
 
