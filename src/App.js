@@ -10,7 +10,7 @@ function App() {
   const [project, setProject] = useState('auxbuddy');
 
   function changeView(e) {
-    setView(e.target.id);
+    setView(e);
   }
 
   function showProject(e) {
@@ -24,6 +24,7 @@ function App() {
         view={view}
         project={project}
         selectProject={(e) => showProject(e)}
+        selectView={(e) => changeView(e)}
       ></Content>
     </div>
   );

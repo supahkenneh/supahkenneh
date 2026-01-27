@@ -32,9 +32,9 @@ export const homeObj = {
     aboutMe: {
         // headshot,
         body: [
-            {item: 1, text: `Full Stack Web Developer`},
-            {item: 2, text: `DJ`},
-            {item: 3, text: `Photographer/Videographer`}
+            {item: 1, text: `Full Stack Web Developer`, key: 'dev'},
+            {item: 2, text: `DJ`, key: 'dj'},
+            {item: 3, text: `Photographer/Videographer`, key: 'photo'}
         ]
     }
 }

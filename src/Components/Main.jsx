@@ -2,37 +2,33 @@ import React from 'react';
 import { homeObj, skillsObj, projectsObj, contactObj } from './helpers';
 
 const Main = ({ project, view }) => {
-  let selectedProject;
-  if (project)
-    selectedProject = projectsObj.featured.find((p) => p.id === project);
-  return (    
+  // let selectedProject;
+  // if (project)
+  //   selectedProject = projectsObj.featured.find((p) => p.id === project);
+  return (
     <React.Fragment>
-      {view === 'home' ? (
-        <div
-          className='w-2/5 bg-content-secondary flex justify-start content-center'
-          id='main'
-        >
-          <div className='flex-col text-left p-5 sm:p-20 self-center pb-60'>
-            <div className='text-2xl pt-40 sm:pt-0 font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
-              {homeObj.home.greeting}
-            </div>
-            <div className='text-7xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
-              {homeObj.home.header}
-            </div>
-            {/* <div className='text-2xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
+      <div
+        className='w-2/5 bg-content-secondary flex justify-start content-center'
+        id='main'
+      >
+        <div className='flex-col text-left p-5 sm:p-20 self-center pb-60'>
+          <div className='text-2xl pt-40 sm:pt-0 font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
+            {homeObj.home.greeting}
+          </div>
+          <div className='text-7xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
+            {homeObj.home.header}
+          </div>
+          {/* <div className='text-2xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
               {homeObj.home.subheader.map((line, i) => (
                 <div key={i}>{line}</div>
               ))}
             </div> */}
-            <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>
-              {homeObj.home.descr}
-            </div>
+          <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>
+            {homeObj.home.descr}
           </div>
         </div>
-      ) : (
-        ''
-      )}
-      {view === 'skills' ? (
+      </div>
+      {/* {view === 'skills' ? (
         <div className='w-1/3 sm:w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='grid gap-1 sm:gap-6 grid-cols-3 sm:grid-cols-4 grid-rows-5 self-center'>
             {skillsObj.icons.map((icon, i) => {
@@ -112,7 +108,7 @@ const Main = ({ project, view }) => {
         </div>
       ) : (
         ''
-      )}
+      )} */}
     </React.Fragment>
   );
 };

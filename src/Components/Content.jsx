@@ -7,8 +7,10 @@ import {
   textClasses,
 } from './helpers';
 import { Card } from './Card';
+import { useState } from 'react';
 
-const Content = ({ view, project, selectProject }) => {
+const Content = ({ view, project, selectProject, selectView }) => {
+
   const setClasses = (id, isText) => {
     if (isText) {
       if (project === id) return textClasses.activeClasses;
@@ -21,27 +23,32 @@ const Content = ({ view, project, selectProject }) => {
     }
   };
 
+  const changeView = data => {
+    // Placeholder for future functionality
+    selectView(data);
+  }
+
   return (
     <React.Fragment>
       {view === 'home' ? (
         <div className='w-full bg-content-primary flex-col justify-center content-center' id='content'>
           {homeObj.aboutMe.body.map((data, i) => {
-            let classes = 'text-4xl text-white font-sans opacity-90 mb-2 animate-[fadeIn9_2000ms_ease-in_1] grid grid-flow-row justify-center justify-items-stretch h-1/3 gap-1';
-            switch (data.item) {
-              case 1:
+            let classes = 'text-4xl text-white font-sans opacity-90 mb-2 animate-[fadeIn9_2000ms_ease-in_1] grid grid-flow-row justify-center justify-items-stretch h-1/3 gap-1 hover:cursor-pointer ';
+            switch (data.key) {
+              case 'dev':
                 classes += ` bg-[url('./assets/bg.png')] bg-cover bg-center`;
                 break;
-              case 2:
+              case 'dj':
                 classes += ` bg-[url('./assets/dj-bg.png')] bg-cover bg-center`;
                 break;
-              case 3:
+              case 'photo':
                 classes += ` bg-[url('./assets/photog-bg.jpg')] bg-cover bg-bottom`;
                 break;
             }
             return (
               <div
                 className={classes}
-                key={i}>
+                key={i} onClick={() => changeView(data.key)}>
                 <Card content={data.text} />
               </div>
             );
@@ -50,7 +57,21 @@ const Content = ({ view, project, selectProject }) => {
       ) : (
         ''
       )}
-      {view === 'skills' ? (
+      {view === 'dev' ? (
+        <div>DEV</div>
+      ) : (''
+      )}
+      {view === 'dj' ? (
+        <div>DJ</div>
+      ) : (
+        ''
+      )}
+      {view === 'photo' ? (
+        <div>PHOTO</div>
+      ) : (
+        ''
+      )}
+      {/* {view === 'skills' ? (
         <div className='w-2/3 sm:w-5/12 bg-content-primary flex content-center'>
           <div className='p-10 pb-40 text-left self-center'>
             <div className='mb-3 text-xl font-mono text-accent animate-fadeIn'>
@@ -142,7 +163,7 @@ const Content = ({ view, project, selectProject }) => {
         </div>
       ) : (
         ''
-      )}
+      )} */}
     </React.Fragment>
   );
 };
