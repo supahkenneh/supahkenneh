@@ -38,6 +38,11 @@ module.exports = {
           '100%': { opacity: '70%' }
         },
       },
+      backgroundImage: {
+        'fs-dev-bg': 'url("./assets/bg.png")',
+        'dj-bg': 'url("./assets/dj-bg.png")',
+        'photo-bg': 'url("./assets/photog-bg.jpg")',
+      }
     },
   },
   plugins: [],

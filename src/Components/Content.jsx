@@ -26,16 +26,16 @@ const Content = ({ view, project, selectProject }) => {
       {view === 'home' ? (
         <div className='w-full bg-content-primary flex-col justify-center content-center' id='content'>
           {homeObj.aboutMe.body.map((data, i) => {
-            let classes = 'text-4xl font-sans opacity-90 mb-2 animate-[fadeIn9_2000ms_ease-in_1] grid grid-flow-row justify-center justify-items-stretch h-1/3 gap-1';
+            let classes = 'text-4xl text-white font-sans opacity-90 mb-2 animate-[fadeIn9_2000ms_ease-in_1] grid grid-flow-row justify-center justify-items-stretch h-1/3 gap-1';
             switch (data.item) {
               case 1:
-                classes += ' bg-red-500';
+                classes += ` bg-[url('./assets/bg.png')] bg-cover bg-center`;
                 break;
               case 2:
-                classes += ' bg-green-500';
+                classes += ` bg-[url('./assets/dj-bg.png')] bg-cover bg-center`;
                 break;
               case 3:
-                classes += ' bg-blue-500';
+                classes += ` bg-[url('./assets/photog-bg.jpg')] bg-cover bg-bottom`;
                 break;
             }
             return (
