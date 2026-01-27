@@ -18,28 +18,23 @@ import auxbuddy from '../assets/auxbuddy.gif';
 import hexle from '../assets/hexle.png';
 import pizzashop from '../assets/pizzashop.gif';
 import gimme from '../assets/gimme.gif';
-import experimental from '../assets/experimental.png';
 import linkedin from '../assets/linkedin.png';
-import headshot from '../assets/headshot.jpg';
 import logo from '../assets/logo-1.png';
 
 
 export const homeObj = {
     home: {
-        greeting: `Aloha! My name is`,
+        greeting: `hello! my name is`,
         header: `Kenny Chung`,
-        subheader: `Web Developer 👨🏻‍💻`,
-        descr: ` I am a full stack developer with a passion for all things tech. I enjoy creating clean, efficient, and accessible web applications that provide seamless user experiences.`,
+        subheader: [`💻 Full Stack Web Developer`, `🎧 DJ`, `📷 Photographer/Videographer`],
+        descr: `I love creating applications that solve real world problems and provide engaging user experiences. When I'm not coding, you can find me behind the decks or capturing moments through my lens. Let's build something amazing together!`,
     },
     aboutMe: {
-        headshot,
+        // headshot,
         body: [
-            '📍 I am located in Honolulu, Hawaii',
-            '🎓 I was born and raised in Hawaii where I graduated with a Bachelor\'s degree in Nursing',
-            '❓ A couple years later, I decided to exploit my free will and scratch my itch for learning more about programming',
-            '🌐 I attended DevLeague where I learned about web development and what it means to be a developer',
-            '🛠️ Fast forward 7 years later, my day-to-day consists of creating technical solutions to problems involving modernization, scaling, performance, and accessibilty',
-            '🔥 My interests outside of tech include DJing, photography, and videography',
+            {item: 1, text: `Full Stack Web Developer`},
+            {item: 2, text: `DJ`},
+            {item: 3, text: `Photographer/Videographer`}
         ]
     }
 }

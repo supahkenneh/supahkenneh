@@ -1,4 +1,4 @@
-import { navBarClasses, appLogo } from './helpers';
+import { navBarClasses, appLogo, homeObj } from './helpers';
 
 const NavBar = ({ view, handleView }) => {
   const setClasses = (viewType) => {
@@ -8,8 +8,11 @@ const NavBar = ({ view, handleView }) => {
   };
 
   return (
-    <div className='flex justify-evenly sm:justify-between opacity-70'>
-      <div
+    <div className='flex bg-content-darkest text-content-secondary'>
+      <div className='text-2xl w-1/3 self-end text-end font-mono'>{homeObj.home.greeting}</div>
+      <div className='text-6xl w-1/3 self-end text-start'>{homeObj.home.header}</div>
+      <div className='text-base w-1/3 self-end text-start p-1'>{homeObj.home.descr}</div>
+      {/* <div
         className='flex w-4/12 sm:w-7/12 text-4xl p-3 cursor-pointer pl-5 ease-in duration-200 hover:underline active:text-accent'
         id='home'
         onClick={handleView}
@@ -43,7 +46,7 @@ const NavBar = ({ view, handleView }) => {
         >
           Contact
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

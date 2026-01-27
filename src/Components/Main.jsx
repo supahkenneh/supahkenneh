@@ -5,23 +5,25 @@ const Main = ({ project, view }) => {
   let selectedProject;
   if (project)
     selectedProject = projectsObj.featured.find((p) => p.id === project);
-  return (
+  return (    
     <React.Fragment>
       {view === 'home' ? (
         <div
-          className='w-auto sm:w-7/12 bg-content-secondary flex justify-center content-center'
+          className='w-2/5 bg-content-secondary flex justify-start content-center'
           id='main'
         >
           <div className='flex-col text-left p-5 sm:p-20 self-center pb-60'>
             <div className='text-2xl pt-40 sm:pt-0 font-mono text-accent animate-[fadeIn_500ms_ease-in_1]'>
               {homeObj.home.greeting}
             </div>
-            <div className='text-8xl sm:text-9xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
+            <div className='text-7xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
               {homeObj.home.header}
             </div>
-            <div className='text-3xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
-              {homeObj.home.subheader}
-            </div>
+            {/* <div className='text-2xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
+              {homeObj.home.subheader.map((line, i) => (
+                <div key={i}>{line}</div>
+              ))}
+            </div> */}
             <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>
               {homeObj.home.descr}
             </div>
@@ -31,7 +33,7 @@ const Main = ({ project, view }) => {
         ''
       )}
       {view === 'skills' ? (
-        <div className='w-auto sm:w-7/12 bg-content-secondary flex justify-center content-center'>
+        <div className='w-1/3 sm:w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='grid gap-1 sm:gap-6 grid-cols-3 sm:grid-cols-4 grid-rows-5 self-center'>
             {skillsObj.icons.map((icon, i) => {
               return (
@@ -55,7 +57,7 @@ const Main = ({ project, view }) => {
         ''
       )}
       {view === 'projects' ? (
-        <div className='w-auto sm:w-7/12 bg-content-secondary flex justify-center content-center'>
+        <div className='w-1/3 sm:w-7/12 bg-content-secondary flex justify-center content-center'>
           <div className='flex self-center h-1/2 mb-40 animate-fadeIn rounded-lg border-4 border-accent p-1'>
             {selectedProject ? (
               <img
@@ -72,7 +74,7 @@ const Main = ({ project, view }) => {
         ''
       )}
       {view === 'contact' ? (
-        <div className='w-screen h-screen bg-content-secondary flex-col sm:flex sm:flex-row justify-evenly content-center'>
+        <div className='w-1/3 h-screen bg-content-secondary flex-col sm:flex sm:flex-row justify-evenly content-center'>
           {contactObj.links.map((contact, i) => {
             return (
               <div className='flex justify-center self-center pb-10 sm:pb-60 animate-fadeIn'>

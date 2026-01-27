@@ -4,15 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'darkest': '#101419',
-        'content-primary': '#424B4D',
-        'content-secondary': '#1F2933',
+        'darkest': '#101419', 
+        'content-primary': '#f7b801',
+        'content-secondary': '#black',
         'content-text': '#718284',
-        'accent': '#6EF9F5'
+        'accent': '#121212'
       },
       fontFamily: {
         'mono': ['Roboto Mono', 'monospace'],
-        'sans': ['Work Sans', 'sans-serif']
+        'sans': ['Work Sans', 'sans-serif'],
+        'serif': ['Impact', 'serif']
       },
       backgroundImage: {
         'background': 'url("./assets/bg.png")'

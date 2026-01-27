@@ -18,16 +18,13 @@ function App() {
   }
 
   return (
-    <div className='App bg-darkest text-white h-screen'>
-      <NavBar handleView={(e) => changeView(e)} view={view} />
-      <div className='flex-col sm:flex sm:flex-row h-full'>
-        <Main view={view} project={project}></Main>
-        <Content
-          view={view}
-          project={project}
-          selectProject={(e) => showProject(e)}
-        ></Content>
-      </div>
+    <div className='h-screen w-full flex flex-row overflow-hidden'>
+      <Main view={view} project={project}></Main>
+      <Content
+        view={view}
+        project={project}
+        selectProject={(e) => showProject(e)}
+      ></Content>
     </div>
   );
 }
