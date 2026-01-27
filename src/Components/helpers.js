@@ -1,25 +1,23 @@
-// import javascript from '../assets/javascript.png';
-// import typescript from '../assets/typescript.png';
-// import react from '../assets/react.png';
-// import angular from '../assets/angular.png';
-// import aws from '../assets/aws.png';
-// import mongo from '../assets/mongo.png';
-// import node from '../assets/node.png';
-// import redux from '../assets/redux.png';
 import github from '../assets/github.png';
-// import python from '../assets/python.png';
-// import swift from '../assets/swift.png';
-// import tailwind from '../assets/tailwind.png';
-// import phaser from '../assets/phaser.png';
-// import html from '../assets/html.png';
-// import css from '../assets/css.png';
-// import material from '../assets/material.png';
 import auxbuddy from '../assets/auxbuddy.gif';
 import hexle from '../assets/hexle.png';
 import pizzashop from '../assets/pizzashop.gif';
 import gimme from '../assets/gimme.gif';
 import linkedin from '../assets/linkedin.png';
 import logo from '../assets/logo-1.png';
+
+// Obj format
+// {
+//     context: 'context-name',
+//         layout: '1 or 2',
+//             body: [
+//                 {
+//                     descr: 'Description text',
+//                     listItems: [
+//                         'can be any type'
+//                     ]
+//         ]
+// }
 
 
 export const homeObj = {
@@ -40,7 +38,7 @@ export const homeObj = {
 
 export const skillsObj = {
     context: 'devskills',
-    layout: '1',
+    layout: ['1', '2'],
     body: [
         {
             descr: 'A few of the tools I have worked with:',
@@ -73,7 +71,7 @@ export const skillsObj = {
 
 export const projectsObj = {
     context: 'devprojects',
-    layout: '2',
+    layout: ['2', '2'],
     body: [
         {
             descr: 'A few of my personal projects:',
@@ -148,6 +146,36 @@ export const projectsObj = {
         //     stack: ['VS Code', 'JSON']
         // }
     ],
+};
+
+export const djObj = {
+    context: 'dj',
+    layout: ['2', '1'],
+    body: [
+        {
+            descr: `I spend a lot of time listening to music and discovering new artists and genres. In 2019, I decided to take my passion for music a step further by learning how to DJ. Since then, I've played at various events and venues, honing my skills and developing my unique style. Below are some of my mixes:`,
+            listItems: [
+                {
+                    descr: 'Mixes coming soon'
+                }
+            ]
+        }
+    ]
+};
+
+export const photoObj = {
+    context: 'photo',
+    layout: ['2', '1'],
+    body: [
+        {
+            descr: `Below are some examples of my video work.`,
+            listItems: [
+                {
+                    descr: 'Videos coming soon'
+                }
+            ]
+        }
+    ]
 };
 
 export const contactObj = {

@@ -1,14 +1,14 @@
 export const SubContent = ({ content }) => {
 
   return (
-    <div className="w-1/2">
+    <div className={content.layout[1] === '1' ? 'w-auto' : 'w-1/2'}>
       <div>
         {content.body.map((data, i) => {
           return (
             <div key={i} className="animate-fadeIn font-mono">
               <div className="mb-3 px-5">
                 <div className="text-xl mb-2">{data.descr}</div>
-                {content.layout === '1' ?
+                {content.layout[0] === '1' ?
                   <ul className='grid grid-cols-2'>
                     {data.listItems.map((tool, j) => (
                       <li key={j} className="text-md mb-1 font-sans">{tool}</li>
