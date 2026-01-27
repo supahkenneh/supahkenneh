@@ -1,19 +1,19 @@
-import javascript from '../assets/javascript.png';
-import typescript from '../assets/typescript.png';
-import react from '../assets/react.png';
-import angular from '../assets/angular.png';
-import aws from '../assets/aws.png';
-import mongo from '../assets/mongo.png';
-import node from '../assets/node.png';
-import redux from '../assets/redux.png';
+// import javascript from '../assets/javascript.png';
+// import typescript from '../assets/typescript.png';
+// import react from '../assets/react.png';
+// import angular from '../assets/angular.png';
+// import aws from '../assets/aws.png';
+// import mongo from '../assets/mongo.png';
+// import node from '../assets/node.png';
+// import redux from '../assets/redux.png';
 import github from '../assets/github.png';
-import python from '../assets/python.png';
-import swift from '../assets/swift.png';
-import tailwind from '../assets/tailwind.png';
-import phaser from '../assets/phaser.png';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
-import material from '../assets/material.png';
+// import python from '../assets/python.png';
+// import swift from '../assets/swift.png';
+// import tailwind from '../assets/tailwind.png';
+// import phaser from '../assets/phaser.png';
+// import html from '../assets/html.png';
+// import css from '../assets/css.png';
+// import material from '../assets/material.png';
 import auxbuddy from '../assets/auxbuddy.gif';
 import hexle from '../assets/hexle.png';
 import pizzashop from '../assets/pizzashop.gif';
@@ -30,105 +30,82 @@ export const homeObj = {
         descr: `I love creating applications that solve real world problems and provide engaging user experiences. When I'm not coding, you can find me behind the decks or capturing moments through my lens. Let's build something amazing together!`,
     },
     aboutMe: {
-        // headshot,
         body: [
-            {item: 1, text: `Full Stack Web Developer`, key: 'dev'},
-            {item: 2, text: `DJ`, key: 'dj'},
-            {item: 3, text: `Photographer/Videographer`, key: 'photo'}
+            { item: 1, text: `Full Stack Web Developer`, key: 'dev' },
+            { item: 2, text: `DJ`, key: 'dj' },
+            { item: 3, text: `Photographer/Videographer`, key: 'photo' }
         ]
     }
 }
 
 export const skillsObj = {
-    tech: [
-        'Javascript',
-        'Typescript',
-        'React',
-        'Angular',
-        'Express',
-        'Node',
-        'HTML/CSS',
-        'Version Control: Github',
-        'Relational Databases: SQL',
-        'Non-relational Databases: MongoDB',
-        'Oracle/Peoplesoft',
-        'Redux',
-        'AWS - EC2, S3',
-        'Material UI',
-    ],
-    learning: [
-        'Python',
-        'React Native'
-    ],
-    icons: [
+    context: 'devskills',
+    layout: '1',
+    body: [
         {
-            label: 'javascript',
-            path: javascript
+            descr: 'A few of the tools I have worked with:',
+            listItems: [
+                'Javascript',
+                'Typescript',
+                'React',
+                'Angular',
+                'Express',
+                'Node',
+                'HTML/CSS',
+                'Github',
+                'SQL',
+                'MongoDB',
+                'Oracle/Peoplesoft',
+                'Redux',
+                'AWS - EC2, S3',
+                'Material UI',
+            ]
         },
         {
-            label: 'typescript',
-            path: typescript
-        },
-        {
-            label: 'react',
-            path: react
-        },
-        {
-            label: 'angular',
-            path: angular
-        },
-        {
-            label: 'node',
-            path: node
-        },
-        {
-            label: 'html',
-            path: html
-        },
-        {
-            label: 'css',
-            path: css
-        },
-        {
-            label: 'github',
-            path: github
-        },
-        {
-            label: 'mongo',
-            path: mongo
-        },
-        {
-            label: 'redux',
-            path: redux
-        },
-        {
-            label: 'aws',
-            path: aws
-        },
-        {
-            label: 'material',
-            path: material
-        },
-        {
-            label: 'python',
-            path: python
-        },
-        {
-            label: 'swift',
-            path: swift
-        },
-        {
-            label: 'tailwind',
-            path: tailwind
-        },
-        {
-            label: 'phaser',
-            path: phaser
-        },
+            descr: 'Currently working on:',
+            listItems: [
+                'Python',
+                'Homelabbing'
+            ]
+        }
     ]
 };
 
 export const projectsObj = {
+    context: 'devprojects',
+    layout: '2',
+    body: [
+        {
+            descr: 'A few of my personal projects:',
+            listItems: [
+                {
+                    name: 'Lucky Number',
+                    descr: 'A web app I built for the Chinese Chamber of Commerce Annual Golf Tournament that allowed participants to track their raffle tickets and prizes',
+                    descr2: 'React, Javascript, Firebase, Firestore'
+                },
+                {
+                    name: 'Aux Buddy',
+                    descr: 'A Spotify playlist generator based on user mood and environment.',
+                    descr2: 'React, Javascript, Node.js, Spotify API, Tailwind CSS, Heroku, Express.js'
+                },
+                {
+                    name: 'Hexle',
+                    descr: 'A color guessing game inspired by Wordle.',
+                    descr2: 'React, Javascript'
+                },
+                {
+                    name: 'Pizza Shop',
+                    descr: 'A fun pizza-themed game developed using Phaser framework.',
+                    descr2: 'Phaser, Javascript, HTML'
+                },
+                {
+                    name: 'Gimme Gimme',
+                    descr: 'A photo submission game using IBM Watson for photo recognition.',
+                    descr2: 'Javascript, Socket.io, IBM Watson, AWS S3 Bucket, Node.js, Express.js, Docker, Heroku'
+                },
+            ]
+        }
+    ],
     featured: [
         {
             id: 'auxbuddy',

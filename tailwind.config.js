@@ -8,7 +8,8 @@ module.exports = {
         'content-primary': '#f7b801',
         'content-secondary': '#black',
         'content-text': '#718284',
-        'accent': '#121212'
+        'content-accent': '#ff0054',
+        'accent': '#61DBFB'
       },
       fontFamily: {
         'mono': ['Roboto Mono', 'monospace'],

@@ -1,5 +1,5 @@
 import React from 'react';
-import { homeObj, skillsObj, projectsObj, contactObj } from './helpers';
+import { homeObj } from './helpers';
 
 const Main = ({ project, view }) => {
   // let selectedProject;
