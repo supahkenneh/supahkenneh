@@ -31,6 +31,8 @@ const Content = ({ view, selectView }) => {
               case 'photo':
                 classes += ` bg-[url('./assets/photog-bg.jpg')] bg-cover bg-bottom`;
                 break;
+              default:
+                break;
             }
             return (
               <div

@@ -1,10 +1,11 @@
 import React from 'react';
 import { homeObj } from './helpers';
+import { ContactForm } from './ContactForm';
+import { useState } from 'react';
 
-const Main = ({ project, view }) => {
-  // let selectedProject;
-  // if (project)
-  //   selectedProject = projectsObj.featured.find((p) => p.id === project);
+const Main = () => {
+  let [showForm, setShowForm] = useState(false);
+
   return (
     <React.Fragment>
       <div
@@ -18,78 +19,24 @@ const Main = ({ project, view }) => {
           <div className='text-7xl font-sans animate-[fadeIn_1500ms_ease-in_1]'>
             {homeObj.home.header}
           </div>
-          {/* <div className='text-2xl font-sans opacity-90 animate-[fadeIn9_1500ms_ease-in_1]'>
-              {homeObj.home.subheader.map((line, i) => (
-                <div key={i}>{line}</div>
-              ))}
-            </div> */}
           <div className='text-lg opacity-70 animate-[fadeIn7_2000ms_ease-in_1]'>
             {homeObj.home.descr}
           </div>
+          <div>
+            <button className='border shadow-md rounded-md p-2 mt-5 bg-content-primary hover:bg-content-accent hover:text-white' onClick={() => setShowForm(!showForm)}>
+              Let's Connect!
+            </button>
+          </div>
+          {
+            showForm && (
+              <div>
+                <ContactForm />
+              </div>
+            )
+          }
         </div>
       </div>
-      {/* {view === 'skills' ? (
-        <div className='w-1/3 sm:w-7/12 bg-content-secondary flex justify-center content-center'>
-          <div className='grid gap-1 sm:gap-6 grid-cols-3 sm:grid-cols-4 grid-rows-5 self-center'>
-            {skillsObj.icons.map((icon, i) => {
-              return (
-                <div
-                  className='animate-fadeIn skill-icon'
-                  key={i}
-                  id={`icon-${i}`}
-                >
-                  <img
-                    src={icon.path}
-                    alt={icon.label}
-                    key={i}
-                    className='h-32 w-32 m-1'
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
-      {view === 'projects' ? (
-        <div className='w-1/3 sm:w-7/12 bg-content-secondary flex justify-center content-center'>
-          <div className='flex self-center h-1/2 mb-40 animate-fadeIn rounded-lg border-4 border-accent p-1'>
-            {selectedProject ? (
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.id}
-                className='pointer-events-none'
-              />
-            ) : (
-              ''
-            )}
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
-      {view === 'contact' ? (
-        <div className='w-1/3 h-screen bg-content-secondary flex-col sm:flex sm:flex-row justify-evenly content-center'>
-          {contactObj.links.map((contact, i) => {
-            return (
-              <div className='flex justify-center self-center pb-10 sm:pb-60 animate-fadeIn'>
-                <a
-                  href={contact.link}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='flex text-2xl items-center'
-                >
-                  <img
-                    src={contact.icon}
-                    alt={contact.id}
-                    className='w-12 h-12'
-                  />
-                  {contact.label}
-                </a>
-              </div>
-            );
-          })}
+      {/* {view === 'contact' ? (
           {contactObj.contacts.map((contact, i) => {
             return (
               <div key={i} className='flex justify-center self-center pb-10 sm:mb-60 animate-fadeIn'>
